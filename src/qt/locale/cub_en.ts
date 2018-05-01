@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Cub addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your test addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Cub addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your test addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -221,7 +221,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>Cub will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Cubs from being stolen by malware infecting your computer.</source>
+        <source>test will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tests from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -231,7 +231,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Cub&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR test&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -307,7 +307,7 @@
     </message>
     <message>
         <location line="+6"/>
-        <source>Enter a Cub Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a test Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -318,7 +318,7 @@
     </message>
     <message>
         <location line="-355"/>
-        <source>The Cub address to sign the message with</source>
+        <source>The test address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -360,7 +360,7 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Cub address</source>
+        <source>Sign the message to prove you own this test address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -391,12 +391,12 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>The Cub address the message was signed with</source>
+        <source>The test address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+29"/>
-        <source>Verify the message to ensure it was signed with the specified Cub address</source>
+        <source>Verify the message to ensure it was signed with the specified test address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -771,17 +771,17 @@
     <message>
         <location line="-396"/>
         <location line="+831"/>
-        <source>Cub</source>
+        <source>test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-652"/>
-        <source>Send coins to a Cub address</source>
+        <source>Send coins to a test address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Request payments (generates QR codes and cub: URIs)</source>
+        <source>Request payments (generates QR codes and test: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -796,27 +796,27 @@
     </message>
     <message>
         <location line="+29"/>
-        <source>&amp;About Cub</source>
+        <source>&amp;About test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Cub</source>
+        <source>Show information about test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Modify configuration options for Cub</source>
+        <source>Modify configuration options for test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>Sign messages with your Cub addresses to prove you own them</source>
+        <source>Sign messages with your test addresses to prove you own them</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Cub addresses</source>
+        <source>Verify messages to ensure they were signed with specified test addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -856,7 +856,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Open a Cub: URI or payment request</source>
+        <source>Open a test: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -871,17 +871,17 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Show the Cub help message to get a list with possible Cub command-line options</source>
+        <source>Show the test help message to get a list with possible test command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+201"/>
-        <source>Cub client</source>
+        <source>test client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location line="+190"/>
-        <source>%n active connection(s) to Cub network</source>
+        <source>%n active connection(s) to test network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1077,7 +1077,7 @@ Address: %4
     </message>
     <message>
         <location filename="../blockexplorer.cpp" line="+473"/>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (cub.conf).</source>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (test.conf).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1456,7 +1456,7 @@ Address: %4
     </message>
     <message>
         <location line="+67"/>
-        <source>The entered address &quot;%1&quot; is not a valid Cub address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid test address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1512,7 +1512,7 @@ Address: %4
     </message>
     <message>
         <location line="+0"/>
-        <source>Cub</source>
+        <source>test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1523,7 +1523,7 @@ Address: %4
     </message>
     <message>
         <location line="+4"/>
-        <source>About Cub</source>
+        <source>About test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1581,17 +1581,17 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Cub.</source>
+        <source>Welcome to test.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Cub will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where test will store its data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Cub will download and store a copy of the Cub block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>test will download and store a copy of the test block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1606,7 +1606,7 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+77"/>
-        <source>Cub</source>
+        <source>test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1782,8 +1782,8 @@ Address: %4
     </message>
     <message>
         <location line="+16"/>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Cub addresses after it matures.
-To Add: enter percentage to give and Cub address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other test addresses after it matures.
+To Add: enter percentage to give and test address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
         <translation type="unfinished"></translation>
@@ -1948,12 +1948,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 10000 Cub</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 10000 Cub</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1963,12 +1963,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is the quickest and will cost about ~0.025 Cub to anonymize 10000 Cub</source>
+        <source>This option is the quickest and will cost about ~0.025 test to anonymize 10000 test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 Cub to anonymize 10000 Cub</source>
+        <source>This option is moderately fast and will cost about 0.05 test to anonymize 10000 test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1978,7 +1978,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>0.1 Cub per 10000 Cub you anonymize.</source>
+        <source>0.1 test per 10000 test you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1990,17 +1990,17 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="-27"/>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Cub&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening test&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Cub&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening test&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Cub&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening test&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2076,7 +2076,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+33"/>
-        <source>Automatically open the Cub client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the test client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2101,12 +2101,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="-179"/>
-        <source>Automatically start Cub after logging in to the system.</source>
+        <source>Automatically start test after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Cub on system login</source>
+        <source>&amp;Start test on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2126,7 +2126,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+15"/>
-        <source>Amount of Cub to keep anonymized</source>
+        <source>Amount of test to keep anonymized</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2161,13 +2161,13 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+192"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Cub.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting test.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/testtest/cubcoin-translations</source>
+https://www.transifex.com/testtest/testcoin-translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2177,7 +2177,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Connect to the Cub network through a SOCKS5 proxy.</source>
+        <source>Connect to the test network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2374,7 +2374,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
         <location line="+10"/>
         <location line="+1015"/>
         <location line="+93"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Cub network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the test network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2429,7 +2429,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+27"/>
-        <source>0 Cub / 0 Rounds</source>
+        <source>0 test / 0 Rounds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2661,12 +2661,12 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="-108"/>
-        <source>Cannot start cub: click-to-pay handler</source>
+        <source>Cannot start test: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+114"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Cub address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid test address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2774,7 +2774,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+113"/>
-        <source>Enter a Cub address (e.g. %1)</source>
+        <source>Enter a test address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2969,7 +2969,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+79"/>
-        <source>Open the Cub debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the test debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3181,7 +3181,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="-36"/>
-        <source>Welcome to the Cub RPC console.</source>
+        <source>Welcome to the test RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3272,12 +3272,12 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="-37"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Cub network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the test network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Cub network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the test network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3570,7 +3570,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+7"/>
-        <source>0 Cub</source>
+        <source>0 test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3630,18 +3630,18 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="-165"/>
-        <source>If the custom fee is set to 1000 uCubs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uCubs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uCubs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 utests and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 utests in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 utests. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>If the custom fee is set to 1000 uCubs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uCubs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uCubs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 utests and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 utests in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 utests. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Cub transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for test transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3774,7 +3774,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+632"/>
-        <source>Warning: Invalid Cub address</source>
+        <source>Warning: Invalid test address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3918,7 +3918,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Cub address to send the payment to</source>
+        <source>The test address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3972,7 +3972,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the Cub: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Cub network.</source>
+        <source>A message that was attached to the test: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the test network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4007,7 +4007,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+75"/>
-        <source>Cub is shutting down...</source>
+        <source>test is shutting down...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4035,7 +4035,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Cub address to sign the message with</source>
+        <source>The test address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4077,17 +4077,17 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Cub address</source>
+        <source>Sign the message to prove you own this test address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>
-        <source>The Cub address the message was signed with</source>
+        <source>The test address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Cub address</source>
+        <source>Verify the message to ensure it was signed with the specified test address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4202,7 +4202,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>Cub</source>
+        <source>test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4222,7 +4222,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Cub developers</source>
+        <source>The test developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4935,7 +4935,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     <message>
         <location line="-18"/>
         <location line="+9"/>
-        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 Cub.</source>
+        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 test.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4988,9 +4988,9 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
 </context>
 <context>
-    <name>cub-core</name>
+    <name>test-core</name>
     <message>
-        <location filename="../cubstrings.cpp" line="+12"/>
+        <location filename="../teststrings.cpp" line="+12"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation type="unfinished">(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
     </message>
@@ -5021,7 +5021,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Cannot obtain a lock on data directory %s. Cub is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. test is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5046,7 +5046,7 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Disable all Cub specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all test specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5101,12 +5101,12 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in Cub/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in test/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in Cub/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in test/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5236,22 +5236,22 @@ https://www.transifex.com/testtest/cubcoin-translations</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>To use cubd, or the -server option to cub-qt, you must set an rpcpassword in the configuration file:
+        <source>To use testd, or the -server option to test-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=cubrpc
+rpcuser=testrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Cub Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;test Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Unable to bind to %s on this computer. Cub is probably already running.</source>
+        <source>Unable to bind to %s on this computer. test is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5261,12 +5261,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Cub Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+2"/>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 Cub.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 test.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 Cub.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 test.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5286,7 +5286,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Cub Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Cub will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong test will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5476,7 +5476,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Cub Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) %i The Cub Developers</source>
+        <source>Copyright (C) %i The test Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5566,7 +5566,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Cub Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Cub</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5631,7 +5631,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Cub Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Fee (in Cub/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in test/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5706,7 +5706,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Cub Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Initialization sanity check failed. Cub is shutting down.</source>
+        <source>Initialization sanity check failed. test is shutting down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5846,7 +5846,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Cub Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+53"/>
-        <source>Keep N Cub anonymized (default: %u)</source>
+        <source>Keep N test anonymized (default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6481,7 +6481,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Cub Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Cub to complete</source>
+        <source>Wallet needed to be rewritten: restart test to complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/cub-config.h"
+#include "config/test-config.h"
 #endif
 
 #include "optionsmodel.h"
@@ -62,7 +62,7 @@ void OptionsModel::Init()
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", BitcoinUnits::Cub);
+        settings.setValue("nDisplayUnit", BitcoinUnits::test);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
     if (!settings.contains("strThirdPartyTxUrls"))
@@ -76,11 +76,11 @@ void OptionsModel::Init()
     if (!settings.contains("nObfuscationRounds"))
         settings.setValue("nObfuscationRounds", 2);
 
-    if (!settings.contains("nAnonymizeCubAmount"))
-        settings.setValue("nAnonymizeCubAmount", 1000);
+    if (!settings.contains("nAnonymizetestAmount"))
+        settings.setValue("nAnonymizetestAmount", 1000);
 
     nObfuscationRounds = settings.value("nObfuscationRounds").toLongLong();
-    nAnonymizeCubAmount = settings.value("nAnonymizeCubAmount").toLongLong();
+    nAnonymizetestAmount = settings.value("nAnonymizetestAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -147,8 +147,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nObfuscationRounds"))
         SoftSetArg("-obfuscationrounds", settings.value("nObfuscationRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeCubAmount"))
-        SoftSetArg("-anonymizecubamount", settings.value("nAnonymizeCubAmount").toString().toStdString());
+    if (settings.contains("nAnonymizetestAmount"))
+        SoftSetArg("-anonymizetestamount", settings.value("nAnonymizetestAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -159,7 +159,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in cub.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in test.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())
@@ -228,8 +228,8 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nThreadsScriptVerif");
         case ObfuscationRounds:
             return QVariant(nObfuscationRounds);
-        case AnonymizeCubAmount:
-            return QVariant(nAnonymizeCubAmount);
+        case AnonymizetestAmount:
+            return QVariant(nAnonymizetestAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -338,10 +338,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             settings.setValue("nObfuscationRounds", nObfuscationRounds);
             emit obfuscationRoundsChanged(nObfuscationRounds);
             break;
-        case AnonymizeCubAmount:
-            nAnonymizeCubAmount = value.toInt();
-            settings.setValue("nAnonymizeCubAmount", nAnonymizeCubAmount);
-            emit anonymizeCubAmountChanged(nAnonymizeCubAmount);
+        case AnonymizetestAmount:
+            nAnonymizetestAmount = value.toInt();
+            settings.setValue("nAnonymizetestAmount", nAnonymizetestAmount);
+            emit anonymizetestAmountChanged(nAnonymizetestAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

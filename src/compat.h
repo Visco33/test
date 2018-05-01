@@ -7,7 +7,7 @@
 #define BITCOIN_COMPAT_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/cub-config.h"
+#include "config/test-config.h"
 #endif
 
 #ifdef WIN32

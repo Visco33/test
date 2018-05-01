@@ -3,7 +3,7 @@ variables, and defining build commands.
 
 The package "mylib" will be used here as an example
 
-General tcub:
+General ttest:
 - mylib_foo is written as $(package)_foo in order to make recipes more similar.
 
 ## Identifiers

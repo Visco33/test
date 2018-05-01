@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between cub-cli and cubd)
- * of a given instance of the Cub system.
+ * CBaseChainParams defines the base parameters (shared between test-cli and testd)
+ * of a given instance of the test system.
  */
 class CBaseChainParams
 {

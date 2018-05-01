@@ -52,7 +52,7 @@ extern "C"{
  *
  * Some tests on an Intel Core2 Q6600 (both 64-bit and 32-bit, 32 kB L1
  * code cache), a PowerPC (G3, 32 kB L1 code cache), an ARM920T core
- * (16 kB L1 code cache), and a small MCUB-compatible CPU (Broadcom BCM3302,
+ * (16 kB L1 code cache), and a small Mtest-compatible CPU (Broadcom BCM3302,
  * 8 kB L1 code cache), seem to show that the following are optimal:
  *
  * -- x86, 64-bit: use the 64-bit implementation, unroll 8 rounds,
@@ -65,7 +65,7 @@ extern "C"{
  * copy the state. Unrolling 4 or 6 rounds is near-optimal.
  * -- ARM: use the 64-bit implementation, unroll 2 or 4 rounds,
  * copy the state.
- * -- MCUB: use the 64-bit implementation, unroll 2 rounds, copy
+ * -- Mtest: use the 64-bit implementation, unroll 2 rounds, copy
  * the state. Unrolling only 1 round is also near-optimal.
  *
  * Also, interleaving does not always yield actual improvements when

@@ -26,7 +26,7 @@ import collections
 PATTERN_IPV4 = re.compile(r"^((\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})):(\d+)$")
 PATTERN_IPV6 = re.compile(r"^\[([0-9a-z:]+)\]:(\d+)$")
 PATTERN_ONION = re.compile(r"^([abcdefghijklmnopqrstuvwxyz234567]{16}\.onion):(\d+)$")
-PATTERN_AGENT = re.compile(r"^(/CUBCore:2.2.(0|1|99)/)$")
+PATTERN_AGENT = re.compile(r"^(/testCore:2.2.(0|1|99)/)$")
 
 def parseline(line):
     sline = line.split()
@@ -43,14 +43,14 @@ def parseline(line):
                 return None
             else:
                 net = 'onion'
-                cubtr = sortkey = m.group(1)
+                testtr = sortkey = m.group(1)
                 port = int(m.group(2))
         else:
             net = 'ipv6'
             if m.group(1) in ['::']: # Not interested in localhost
                 return None
-            cubtr = m.group(1)
-            sortkey = cubtr # XXX parse IPv6 into number, could use name_to_ipv6 from generate-seeds
+            testtr = m.group(1)
+            sortkey = testtr # XXX parse IPv6 into number, could use name_to_ipv6 from generate-seeds
             port = int(m.group(2))
     else:
         # Do IPv4 sanity check
@@ -63,7 +63,7 @@ def parseline(line):
             return None
         net = 'ipv4'
         sortkey = ip
-        cubtr = m.group(1)
+        testtr = m.group(1)
         port = int(m.group(6))
     # Skip bad results.
     if sline[1] == 0:
@@ -86,7 +86,7 @@ def parseline(line):
     # Construct result.
     return {
         'net': net,
-        'ip': cubtr,
+        'ip': testtr,
         'port': port,
         'ipnum': ip,
         'uptime': uptime30,
@@ -98,24 +98,24 @@ def parseline(line):
         'sortkey': sortkey,
     }
 
-def filtermultiport(cub):
+def filtermultiport(test):
     '''Filter out hosts with more nodes per IP'''
     hist = collections.defaultdict(list)
-    for ip in cub:
+    for ip in test:
         hist[ip['sortkey']].append(ip)
     return [value[0] for (key,value) in list(hist.items()) if len(value)==1]
 
 # Based on Greg Maxwell's seed_filter.py
-def filterbyasn(cub, max_per_asn, max_total):
-    # Sift out cub by type
-    cub_ipv4 = [ip for ip in cub if ip['net'] == 'ipv4']
-    cub_ipv6 = [ip for ip in cub if ip['net'] == 'ipv6']
-    cub_onion = [ip for ip in cub if ip['net'] == 'onion']
+def filterbyasn(test, max_per_asn, max_total):
+    # Sift out test by type
+    test_ipv4 = [ip for ip in test if ip['net'] == 'ipv4']
+    test_ipv6 = [ip for ip in test if ip['net'] == 'ipv6']
+    test_onion = [ip for ip in test if ip['net'] == 'onion']
 
     # Filter IPv4 by ASN
     result = []
     asn_count = {}
-    for ip in cub_ipv4:
+    for ip in test_ipv4:
         if len(result) == max_total:
             break
         try:
@@ -132,36 +132,36 @@ def filterbyasn(cub, max_per_asn, max_total):
     # TODO: filter IPv6 by ASN
 
     # Add back non-IPv4
-    result.extend(cub_ipv6)
-    result.extend(cub_onion)
+    result.extend(test_ipv6)
+    result.extend(test_onion)
     return result
 
 def main():
     lines = sys.stdin.readlines()
-    cub = [parseline(line) for line in lines]
+    test = [parseline(line) for line in lines]
 
     # Skip entries with valid address.
-    cub = [ip for ip in cub if ip is not None]
+    test = [ip for ip in test if ip is not None]
     # Skip entries from suspicious hosts.
-    cub = [ip for ip in cub if ip['ip'] not in SUSPICIOUS_HOSTS]
+    test = [ip for ip in test if ip['ip'] not in SUSPICIOUS_HOSTS]
     # Enforce minimal number of blocks.
-    cub = [ip for ip in cub if ip['blocks'] >= MIN_BLOCKS]
+    test = [ip for ip in test if ip['blocks'] >= MIN_BLOCKS]
     # Require service bit 1.
-    cub = [ip for ip in cub if (ip['service'] & 1) == 1]
+    test = [ip for ip in test if (ip['service'] & 1) == 1]
     # Require at least 50% 30-day uptime.
-    cub = [ip for ip in cub if ip['uptime'] > 50]
+    test = [ip for ip in test if ip['uptime'] > 50]
     # Require a known and recent user agent.
-    cub = [ip for ip in cub if PATTERN_AGENT.match(re.sub(' ', '-', ip['agent']))]
+    test = [ip for ip in test if PATTERN_AGENT.match(re.sub(' ', '-', ip['agent']))]
     # Sort by availability (and use last success as tie breaker)
-    cub.sort(key=lambda x: (x['uptime'], x['lastsuccess'], x['ip']), reverse=True)
+    test.sort(key=lambda x: (x['uptime'], x['lastsuccess'], x['ip']), reverse=True)
     # Filter out hosts with multiple bitcoin ports, these are likely abusive
-    cub = filtermultiport(cub)
+    test = filtermultiport(test)
     # Look up ASNs and limit results, both per ASN and globally.
-    cub = filterbyasn(cub, MAX_SEEDS_PER_ASN, NSEEDS)
+    test = filterbyasn(test, MAX_SEEDS_PER_ASN, NSEEDS)
     # Sort the results by IP address (for deterministic output).
-    cub.sort(key=lambda x: (x['net'], x['sortkey']))
+    test.sort(key=lambda x: (x['net'], x['sortkey']))
 
-    for ip in cub:
+    for ip in test:
         if ip['net'] == 'ipv6':
             print('[%s]:%i' % (ip['ip'], ip['port']))
         else:

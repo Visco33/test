@@ -14,7 +14,7 @@ static const int MODEL_UPDATE_DELAY = 250;
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* Cub GUI -- Size of icons in status bar */
+/* test GUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -35,7 +35,7 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /* Transaction list -- TX status decoration - default color */
 #define COLOR_BLACK QColor(51, 51, 51)
 
-/* Tooltcub longer than this (in characters) are converted into rich text,
+/* Toolttest longer than this (in characters) are converted into rich text,
    so that they can be word-wrapped.
  */
 static const int TOOLTIP_WRAP_THRESHOLD = 80;
@@ -49,9 +49,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 35
 
-#define QAPP_ORG_NAME "Cub"
+#define QAPP_ORG_NAME "test"
 #define QAPP_ORG_DOMAIN "test.cash"
-#define QAPP_APP_NAME_DEFAULT "Cub-Qt"
-#define QAPP_APP_NAME_TESTNET "Cub-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "test-Qt"
+#define QAPP_APP_NAME_TESTNET "test-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

@@ -95,7 +95,7 @@ public:
 };
 
 /**
- * CUB RPC command dispatcher.
+ * test RPC command dispatcher.
  */
 class CRPCTable
 {
@@ -234,7 +234,7 @@ extern json_spirit::Value getblockheader(const json_spirit::Array& params, bool 
 extern json_spirit::Value gettxoutsetinfo(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value gettxout(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value verifychain(const json_spirit::Array& params, bool fHelp);
-extern json_spirit::Value getchaintcub(const json_spirit::Array& params, bool fHelp);
+extern json_spirit::Value getchainttest(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value invalidateblock(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value reconsiderblock(const json_spirit::Array& params, bool fHelp);
 

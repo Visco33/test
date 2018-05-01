@@ -133,11 +133,11 @@ void Intro::setDataDirectory(const QString& dataDir)
     if (dataDir == getDefaultDataDirectory()) {
         ui->dataDirDefault->setChecked(true);
         ui->dataDirectory->setEnabled(false);
-        ui->ellcubisButton->setEnabled(false);
+        ui->elltestisButton->setEnabled(false);
     } else {
         ui->dataDirCustom->setChecked(true);
         ui->dataDirectory->setEnabled(true);
-        ui->ellcubisButton->setEnabled(true);
+        ui->elltestisButton->setEnabled(true);
     }
 }
 
@@ -175,7 +175,7 @@ bool Intro::pickDataDirectory()
                 TryCreateDirectory(GUIUtil::qstringToBoostPath(dataDir));
                 break;
             } catch (fs::filesystem_error& e) {
-                QMessageBox::critical(0, tr("Cub"),
+                QMessageBox::critical(0, tr("test"),
                     tr("Error: Specified data directory \"%1\" cannot be created.").arg(dataDir));
                 /* fall through, back to choosing screen */
             }
@@ -184,8 +184,8 @@ bool Intro::pickDataDirectory()
         settings.setValue("strDataDir", dataDir);
     }
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the cub.conf file in the default data directory
-     * (to be consistent with cubd behavior)
+     * override -datadir in the test.conf file in the default data directory
+     * (to be consistent with testd behavior)
      */
     if (dataDir != getDefaultDataDirectory())
         SoftSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting
@@ -228,7 +228,7 @@ void Intro::on_dataDirectory_textChanged(const QString& dataDirStr)
     checkPath(dataDirStr);
 }
 
-void Intro::on_ellcubisButton_clicked()
+void Intro::on_elltestisButton_clicked()
 {
     QString dir = QDir::toNativeSeparators(QFileDialog::getExistingDirectory(0, "Choose data directory", ui->dataDirectory->text()));
     if (!dir.isEmpty())
@@ -243,7 +243,7 @@ void Intro::on_dataDirDefault_clicked()
 void Intro::on_dataDirCustom_clicked()
 {
     ui->dataDirectory->setEnabled(true);
-    ui->ellcubisButton->setEnabled(true);
+    ui->elltestisButton->setEnabled(true);
 }
 
 void Intro::startThread()

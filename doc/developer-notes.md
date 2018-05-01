@@ -97,7 +97,7 @@ Not OK (used plenty in the current source, but not picked up):
 A full list of comment syntaxes picked up by doxygen can be found at http://www.stack.nl/~dimitri/doxygen/manual/docblocks.html,
 but if possible use one of the above styles.
 
-Development tcub and tricks
+Development ttest and tricks
 ---------------------------
 
 **compiling for debugging**
@@ -118,12 +118,12 @@ to see it.
 
 **testnet mode**
 
-Run with the -testnet option to run with "play Cubs (tCub)" on the test network, if you
+Run with the -testnet option to run with "play tests (ttest)" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
 
 **DEBUG_LOCKORDER**
 
-Cub is a multithreaded application, and deadlocks or other multithreading bugs
+test is a multithreaded application, and deadlocks or other multithreading bugs
 can be very difficult to track down. Compiling with -DDEBUG_LOCKORDER (configure
 CXXFLAGS="-DDEBUG_LOCKORDER -g") inserts run-time checks to keep track of which locks
 are held, and adds warnings to the debug.log file if inconsistencies are detected.
@@ -182,7 +182,7 @@ Ignoring IDE/editor files
 In closed-source environments in which everyone uses the same IDE it is common
 to add temporary files it produces to the project-wide `.gitignore` file.
 
-However, in open source software such as Cub, where everyone uses
+However, in open source software such as test, where everyone uses
 their own editors/IDE/tools, it is less common. Only you know what files your
 editor produces and this may change from version to version. The canonical way
 to do this is thus to create your local gitignore. Add this to `~/.gitconfig`:
@@ -212,9 +212,9 @@ Development guidelines
 ============================
 
 A few non-style-related recommendations for developers, as well as points to
-pay attention to for reviewers of Cub code.
+pay attention to for reviewers of test code.
 
-General Cub
+General test
 ----------------------
 
 - New features should be exposed on RPC first, then can be made available in the GUI
@@ -324,7 +324,7 @@ Strings and formatting
 
 - For `strprintf`, `LogPrint`, `LogPrintf` formatting characters don't need size specifiers
 
-  - *Rationale*: Cub uses tinyformat, which is type safe. Leave them out to avoid confusion
+  - *Rationale*: test uses tinyformat, which is type safe. Leave them out to avoid confusion
 
 Threads and synchronization
 ----------------------------
@@ -376,7 +376,7 @@ GUI
     should not interact with the user. That's where View classes come in. The converse also
     holds: try to not directly access core data structures from Views.
 
-Git and github tcub
+Git and github ttest
 ---------------------
 
 - For resolving merge/rebase conflicts, it can be useful to enable diff3 style using
@@ -418,7 +418,7 @@ Git and github tcub
 
         [remote "upstream-pull"]
                 fetch = +refs/pull/*:refs/remotes/upstream-pull/*
-                url = git@github.com:testtest/cub.git
+                url = git@github.com:testtest/test.git
 
   This will add an `upstream-pull` remote to your git repository, which can be fetched using `git fetch --all`
   or `git fetch upstream-pull`. Afterwards, you can use `upstream-pull/NUMBER/head` in arguments to `git show`,

@@ -84,7 +84,7 @@ class Reader {
     kBadRecord = kMaxRecordType + 2
   };
 
-  // Skcub all blocks that are completely before "initial_offset_".
+  // Sktest all blocks that are completely before "initial_offset_".
   //
   // Returns true on success. Handles reporting.
   bool SkipToInitialBlock();

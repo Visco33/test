@@ -30,7 +30,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the CUB Qt UI.
+/** Utility functions used by the test Qt UI.
  */
 namespace GUIUtil
 {
@@ -38,14 +38,14 @@ namespace GUIUtil
 QString dateTimeStr(const QDateTime& datetime);
 QString dateTimeStr(qint64 nTime);
 
-// Render CUB addresses in monospace font
+// Render test addresses in monospace font
 QFont bitcoinAddressFont();
 
 // Set up widgets for address and amounts
 void setupAddressWidget(QValidatedLineEdit* widget, QWidget* parent);
 void setupAmountWidget(QLineEdit* widget, QWidget* parent);
 
-// Parse "cub:" URI into recipient object, return true on successful parsing
+// Parse "test:" URI into recipient object, return true on successful parsing
 bool parseBitcoinURI(const QUrl& uri, SendCoinsRecipient* out);
 bool parseBitcoinURI(QString uri, SendCoinsRecipient* out);
 QString formatBitcoinURI(const SendCoinsRecipient& info);
@@ -103,7 +103,7 @@ bool isObscured(QWidget* w);
 // Open debug.log
 void openDebugLogfile();
 
-// Open cub.conf
+// Open test.conf
 void openConfigfile();
 
 // Open masternode.conf
@@ -117,7 +117,7 @@ void SubstituteFonts(const QString& language);
 
 /** Qt event filter that intercepts ToolTipChange events, and replaces the tooltip with a rich text
       representation if needed. This assures that Qt can word-wrap long tooltip messages.
-      Tooltcub longer than the provided size threshold (in characters) are wrapped.
+      Toolttest longer than the provided size threshold (in characters) are wrapped.
      */
 class ToolTipToRichTextFilter : public QObject
 {

@@ -293,12 +293,12 @@
  *   - BMW-256: short name: <code>bmw256</code>
  *   - BMW-384: short name: <code>bmw384</code> (64)
  *   - BMW-512: short name: <code>bmw512</code> (64)
- * - CubeHash family: file <code>sph_cubehash.h</code> (specified as
- *   CubeHash16/32 in the CubeHash specification)
- *   - CubeHash-224: short name: <code>cubehash224</code>
- *   - CubeHash-256: short name: <code>cubehash256</code>
- *   - CubeHash-384: short name: <code>cubehash384</code>
- *   - CubeHash-512: short name: <code>cubehash512</code>
+ * - testeHash family: file <code>sph_testehash.h</code> (specified as
+ *   testeHash16/32 in the testeHash specification)
+ *   - testeHash-224: short name: <code>testehash224</code>
+ *   - testeHash-256: short name: <code>testehash256</code>
+ *   - testeHash-384: short name: <code>testehash384</code>
+ *   - testeHash-512: short name: <code>testehash512</code>
  * - ECHO family: file <code>sph_echo.h</code>
  *   - ECHO-224: short name: <code>echo224</code>
  *   - ECHO-256: short name: <code>echo256</code>
@@ -1058,16 +1058,16 @@ typedef long long sph_s64;
 #define SPH_DETECT_LITTLE_ENDIAN     1
 
 /*
- * MCUB, little-endian.
+ * Mtest, little-endian.
  */
-#elif MCUBEL || _MCUBEL || __MCUBEL || __MCUBEL__
+#elif MtestEL || _MtestEL || __MtestEL || __MtestEL__
 
 #define SPH_DETECT_LITTLE_ENDIAN     1
 
 /*
- * MCUB, big-endian.
+ * Mtest, big-endian.
  */
-#elif MCUBEB || _MCUBEB || __MCUBEB || __MCUBEB__
+#elif MtestEB || _MtestEB || __MtestEB || __MtestEB__
 
 #define SPH_DETECT_BIG_ENDIAN        1
 
@@ -1571,9 +1571,9 @@ sph_dec32le(const void *src)
  *
  * For most hash functions, using this inline assembly trick changes
  * hashing speed by less than 5% and often _reduces_ it. The biggest
- * gains are for MD4 (+11%) and CubeHash (+30%). For all others, it is
- * less then 10%. The speed gain on CubeHash is probably due to the
- * chronic shortage of registers that CubeHash endures; for the other
+ * gains are for MD4 (+11%) and testeHash (+30%). For all others, it is
+ * less then 10%. The speed gain on testeHash is probably due to the
+ * chronic shortage of registers that testeHash endures; for the other
  * functions, the generic code appears to be efficient enough already.
  *
 #elif (SPH_PPC32_GCC || SPH_PPC64_GCC) && !SPH_NO_ASM

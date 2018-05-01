@@ -20,18 +20,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(Cub);
-    unitlist.append(mCub);
-    unitlist.append(uCub);
+    unitlist.append(test);
+    unitlist.append(mtest);
+    unitlist.append(utest);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case Cub:
-    case mCub:
-    case uCub:
+    case test:
+    case mtest:
+    case utest:
         return true;
     default:
         return false;
@@ -41,12 +41,12 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case Cub:
-        return QString("cub");
-    case mCub:
-        return QString("mcub");
-    case uCub:
-        return QString::fromUtf8("ucub");
+    case test:
+        return QString("test");
+    case mtest:
+        return QString("mtest");
+    case utest:
+        return QString::fromUtf8("utest");
     default:
         return QString("???");
     }
@@ -56,23 +56,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case Cub:
-            return QString("Cub");
-        case mCub:
-            return QString("mCub");
-        case uCub:
-            return QString::fromUtf8("μCub");
+        case test:
+            return QString("test");
+        case mtest:
+            return QString("mtest");
+        case utest:
+            return QString::fromUtf8("μtest");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case Cub:
-            return QString("tCub");
-        case mCub:
-            return QString("mtCub");
-        case uCub:
-            return QString::fromUtf8("μtCub");
+        case test:
+            return QString("ttest");
+        case mtest:
+            return QString("mttest");
+        case utest:
+            return QString::fromUtf8("μttest");
         default:
             return QString("???");
         }
@@ -83,23 +83,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case Cub:
-            return QString("Cub");
-        case mCub:
-            return QString("Milli-Cub (1 / 1" THIN_SP_UTF8 "000)");
-        case uCub:
-            return QString("Micro-Cub (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case test:
+            return QString("test");
+        case mtest:
+            return QString("Milli-test (1 / 1" THIN_SP_UTF8 "000)");
+        case utest:
+            return QString("Micro-test (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case Cub:
-            return QString("TestCubs");
-        case mCub:
-            return QString("Milli-TestCub (1 / 1" THIN_SP_UTF8 "000)");
-        case uCub:
-            return QString("Micro-TestCub (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case test:
+            return QString("Testtests");
+        case mtest:
+            return QString("Milli-Testtest (1 / 1" THIN_SP_UTF8 "000)");
+        case utest:
+            return QString("Micro-Testtest (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -109,11 +109,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case Cub:
+    case test:
         return 100000000;
-    case mCub:
+    case mtest:
         return 100000;
-    case uCub:
+    case utest:
         return 100;
     default:
         return 100000000;
@@ -123,11 +123,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case Cub:
+    case test:
         return 8;
-    case mCub:
+    case mtest:
         return 5;
-    case uCub:
+    case utest:
         return 2;
     default:
         return 0;

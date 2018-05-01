@@ -58,12 +58,12 @@
         <translation>Mottagar adresser</translation>
     </message>
     <message>
-        <source>These are your CUB addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Det här är dina CUB adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
+        <source>These are your test addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Det här är dina test adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
     </message>
     <message>
-        <source>These are your CUB addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Det här är dina CUB adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your test addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Det här är dina test adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,16 +160,16 @@
         <translation>Bekräfta plånboks krypering</translation>
     </message>
     <message>
-        <source>CUB will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Cubs from being stolen by malware infecting your computer.</source>
-        <translation>CUB kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina Cubs från att bli stulna av skadeprogram som infekterat din dator.</translation>
+        <source>test will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tests from being stolen by malware infecting your computer.</source>
+        <translation>test kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina tests från att bli stulna av skadeprogram som infekterat din dator.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Är du säker på att du vill kryptera din plånbok?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Cub&lt;/b&gt;!</source>
-        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA Cub&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR test&lt;/b&gt;!</source>
+        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA test&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -223,8 +223,8 @@
         <translation>BIP 38 Kryptering</translation>
     </message>
     <message>
-        <source>Enter a Cub Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Skriv in en Cub adress som du vill kryptera med BIP 38.
+        <source>Enter a test Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Skriv in en test adress som du vill kryptera med BIP 38.
 Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den krypterade privata nyckeln.</translation>
     </message>
     <message>
@@ -232,8 +232,8 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
         <translation>Adress:</translation>
     </message>
     <message>
-        <source>The CUB address to sign the message with</source>
-        <translation>CUB adressen för signera meddelandet med</translation>
+        <source>The test address to sign the message with</source>
+        <translation>test adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -264,8 +264,8 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CUB address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna CUB adress</translation>
+        <source>Sign the message to prove you own this test address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna test adress</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -288,12 +288,12 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
         <translation>Ange</translation>
     </message>
     <message>
-        <source>The CUB address the message was signed with</source>
-        <translation>CUB adressen meddelandet blev signerat med</translation>
+        <source>The test address the message was signed with</source>
+        <translation>test adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CUB address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika CUB adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified test address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika test adressen.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -583,16 +583,16 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
         <translation>flik vertygsrad</translation>
     </message>
     <message>
-        <source>Cub</source>
-        <translation>CUB Kärna</translation>
+        <source>test</source>
+        <translation>test Kärna</translation>
     </message>
     <message>
-        <source>Send coins to a CUB address</source>
-        <translation>Skicka mynt till en CUB adress</translation>
+        <source>Send coins to a test address</source>
+        <translation>Skicka mynt till en test adress</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and cub: URIs)</source>
-        <translation>Begär betalning (genererar QR kod och cub: URls)</translation>
+        <source>Request payments (generates QR codes and test: URIs)</source>
+        <translation>Begär betalning (genererar QR kod och test: URls)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -603,24 +603,24 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
         <translation>Utforska masternoder</translation>
     </message>
     <message>
-        <source>&amp;About Cub</source>
-        <translation>Om CUB Kärnan</translation>
+        <source>&amp;About test</source>
+        <translation>Om test Kärnan</translation>
     </message>
     <message>
-        <source>Show information about Cub</source>
-        <translation>Visa information om CUB Kärnan</translation>
+        <source>Show information about test</source>
+        <translation>Visa information om test Kärnan</translation>
     </message>
     <message>
-        <source>Modify configuration options for CUB</source>
-        <translation>Ändra konfigurationsval för CUB</translation>
+        <source>Modify configuration options for test</source>
+        <translation>Ändra konfigurationsval för test</translation>
     </message>
     <message>
-        <source>Sign messages with your CUB addresses to prove you own them</source>
-        <translation>Signera meddelanden med din CUB adress för att visa att du äger dem</translation>
+        <source>Sign messages with your test addresses to prove you own them</source>
+        <translation>Signera meddelanden med din test adress för att visa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CUB addresses</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika CUB adressen.</translation>
+        <source>Verify messages to ensure they were signed with specified test addresses</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika test adressen.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -631,8 +631,8 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
         <translation>Kryptera och avkryptera privata nycklar genom användning av lösenfras</translation>
     </message>
     <message>
-        <source>Cub client</source>
-        <translation>CUB kärn klient</translation>
+        <source>test client</source>
+        <translation>test kärn klient</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -841,15 +841,15 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Cub</source>
-        <translation>CUB Kärna</translation>
+        <source>test</source>
+        <translation>test Kärna</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Cub</source>
-        <translation>CUB Kärna</translation>
+        <source>test</source>
+        <translation>test Kärna</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1106,8 +1106,8 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The CUB address to sign the message with</source>
-        <translation>CUB adressen för signera meddelandet med</translation>
+        <source>The test address to sign the message with</source>
+        <translation>test adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1130,16 +1130,16 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CUB address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna CUB adress</translation>
+        <source>Sign the message to prove you own this test address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna test adress</translation>
     </message>
     <message>
-        <source>The CUB address the message was signed with</source>
-        <translation>CUB adressen meddelandet blev signerat med</translation>
+        <source>The test address the message was signed with</source>
+        <translation>test adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CUB address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika CUB adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified test address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika test adressen.</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1181,8 +1181,8 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Cub</source>
-        <translation>CUB Kärna</translation>
+        <source>test</source>
+        <translation>test Kärna</translation>
     </message>
     </context>
 <context>
@@ -1365,7 +1365,7 @@ Skriv in en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna d
     </message>
     </context>
 <context>
-    <name>cub-core</name>
+    <name>test-core</name>
     <message>
         <source>Error</source>
         <translation>Fel</translation>

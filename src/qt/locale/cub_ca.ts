@@ -270,12 +270,12 @@
         <translation>A&amp;juda</translation>
     </message>
     <message>
-        <source>Cub</source>
-        <translation>Cub</translation>
+        <source>test</source>
+        <translation>test</translation>
     </message>
     <message>
-        <source>&amp;About Cub</source>
-        <translation>&amp;Sobre Cub</translation>
+        <source>&amp;About test</source>
+        <translation>&amp;Sobre test</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -468,12 +468,12 @@
         <translation>versió</translation>
     </message>
     <message>
-        <source>Cub</source>
-        <translation>Cub</translation>
+        <source>test</source>
+        <translation>test</translation>
     </message>
     <message>
-        <source>About Cub</source>
-        <translation>Sobre Cub</translation>
+        <source>About test</source>
+        <translation>Sobre test</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -491,12 +491,12 @@
         <translation>Benvingut</translation>
     </message>
     <message>
-        <source>Welcome to Cub</source>
-        <translation>Benvingut a Cub</translation>
+        <source>Welcome to test</source>
+        <translation>Benvingut a test</translation>
     </message>
     <message>
-        <source>Cub</source>
-        <translation>Cub</translation>
+        <source>test</source>
+        <translation>test</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1048,8 +1048,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Cub</source>
-        <translation>Cub</translation>
+        <source>test</source>
+        <translation>test</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -1200,7 +1200,7 @@
     </message>
     </context>
 <context>
-    <name>cub-core</name>
+    <name>test-core</name>
     <message>
         <source>Error</source>
         <translation>Error</translation>

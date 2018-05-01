@@ -18,7 +18,7 @@ OpenURIDialog::OpenURIDialog(QWidget* parent) : QDialog(parent),
 {
     ui->setupUi(this);
 #if QT_VERSION >= 0x040700
-    ui->uriEdit->setPlaceholderText("cub:");
+    ui->uriEdit->setPlaceholderText("test:");
 #endif
 }
 
@@ -49,5 +49,5 @@ void OpenURIDialog::on_selectFileButton_clicked()
     if (filename.isEmpty())
         return;
     QUrl fileUri = QUrl::fromLocalFile(filename);
-    ui->uriEdit->setText("cub:?r=" + QUrl::toPercentEncoding(fileUri.toString()));
+    ui->uriEdit->setText("test:?r=" + QUrl::toPercentEncoding(fileUri.toString()));
 }

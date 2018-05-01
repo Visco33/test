@@ -14,7 +14,7 @@
 #define BITCOIN_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/cub-config.h"
+#include "config/test-config.h"
 #endif
 
 #include "compat.h"
@@ -34,14 +34,14 @@
 
 using namespace std;
 
-//CUB only features
+//test only features
 
 extern bool fMasterNode;
 extern bool fLiteMode;
 extern bool fEnableSwiftTX;
 extern int nSwiftTXDepth;
 extern int nObfuscationRounds;
-extern int nAnonymizeCubAmount;
+extern int nAnonymizetestAmount;
 extern int nLiquidityProvider;
 extern bool fEnableObfuscation;
 extern int64_t enforceMasternodePaymentsTime;
@@ -218,7 +218,7 @@ void RenameThread(const char* name);
 template <typename Callable>
 void LoopForever(const char* name, Callable func, int64_t msecs)
 {
-    std::string s = strprintf("cub-%s", name);
+    std::string s = strprintf("test-%s", name);
     RenameThread(s.c_str());
     LogPrintf("%s thread start\n", name);
     try {
@@ -244,7 +244,7 @@ void LoopForever(const char* name, Callable func, int64_t msecs)
 template <typename Callable>
 void TraceThread(const char* name, Callable func)
 {
-    std::string s = strprintf("cub-%s", name);
+    std::string s = strprintf("test-%s", name);
     RenameThread(s.c_str());
     try {
         LogPrintf("%s thread start\n", name);

@@ -78,7 +78,7 @@ HEADERS += src/activemasternode.h \
            src/crypter.h \
            src/obfuscation-relay.h \
            src/obfuscation.h \
-           src/cub-config.h \
+           src/test-config.h \
            src/db.h \
            src/eccryptoverify.h \
            src/ecwrapper.h \
@@ -131,7 +131,7 @@ HEADERS += src/activemasternode.h \
            src/wallet_ismine.h \
            src/walletdb.h \
            src/compat/sanity.h \
-           src/config/cub-config.h \
+           src/config/test-config.h \
            src/crypto/common.h \
            src/crypto/hmac_sha256.h \
            src/crypto/hmac_sha512.h \
@@ -142,7 +142,7 @@ HEADERS += src/activemasternode.h \
            src/crypto/sha512.h \
            src/crypto/sph_blake.h \
            src/crypto/sph_bmw.h \
-           src/crypto/sph_cubehash.h \
+           src/crypto/sph_testehash.h \
            src/crypto/sph_echo.h \
            src/crypto/sph_groestl.h \
            src/crypto/sph_jh.h \
@@ -333,7 +333,7 @@ HEADERS += src/activemasternode.h \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.h \
            src/crypto/aes_helper.c \
            src/qt/bitcoinamountfield.moc \
-           src/qt/cub.moc \
+           src/qt/test.moc \
            src/qt/intro.moc \
            src/qt/overviewpage.moc \
            src/qt/rpcconsole.moc \
@@ -374,9 +374,9 @@ SOURCES += src/activemasternode.cpp \
            src/crypter.cpp \
            src/obfuscation-relay.cpp \
            src/obfuscation.cpp \
-           src/cub-cli.cpp \
-           src/cub-tx.cpp \
-           src/cub.cpp \
+           src/test-cli.cpp \
+           src/test-tx.cpp \
+           src/test.cpp \
            src/db.cpp \
            src/eccryptoverify.cpp \
            src/ecwrapper.cpp \
@@ -438,7 +438,7 @@ SOURCES += src/activemasternode.cpp \
            src/crypto/aes_helper.c \
            src/crypto/blake.c \
            src/crypto/bmw.c \
-           src/crypto/cubehash.c \
+           src/crypto/testehash.c \
            src/crypto/echo.c \
            src/crypto/groestl.c \
            src/crypto/hmac_sha256.cpp \
@@ -471,8 +471,8 @@ SOURCES += src/activemasternode.cpp \
            src/qt/coincontroltreewidget.cpp \
            src/qt/csvmodelwriter.cpp \
            src/qt/obfuscationconfig.cpp \
-           src/qt/cub.cpp \
-           src/qt/cubstrings.cpp \
+           src/qt/test.cpp \
+           src/qt/teststrings.cpp \
            src/qt/editaddressdialog.cpp \
            src/qt/guiutil.cpp \
            src/qt/intro.cpp \
@@ -550,7 +550,7 @@ SOURCES += src/activemasternode.cpp \
            src/test/sighash_tests.cpp \
            src/test/sigopcount_tests.cpp \
            src/test/skiplist_tests.cpp \
-           src/test/test_cub.cpp \
+           src/test/test_test.cpp \
            src/test/timedata_tests.cpp \
            src/test/transaction_tests.cpp \
            src/test/uint256_tests.cpp \
@@ -641,21 +641,21 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.c
-RESOURCES += src/qt/cub.qrc src/qt/cub_locale.qrc
+RESOURCES += src/qt/test.qrc src/qt/test_locale.qrc
 
-TRANSLATIONS += src/qt/locale/cub_bg.ts \
-                src/qt/locale/cub_de.ts \
-                src/qt/locale/cub_en.ts \
-                src/qt/locale/cub_es.ts \
-                src/qt/locale/cub_fi.ts \
-                src/qt/locale/cub_fr.ts \
-                src/qt/locale/cub_it.ts \
-                src/qt/locale/cub_ja.ts \
-                src/qt/locale/cub_pl.ts \
-                src/qt/locale/cub_pt.ts \
-                src/qt/locale/cub_ru.ts \
-                src/qt/locale/cub_sk.ts \
-                src/qt/locale/cub_sv.ts \
-                src/qt/locale/cub_vi.ts \
-                src/qt/locale/cub_zh_CN.ts \
-                src/qt/locale/cub_zh_TW.ts
+TRANSLATIONS += src/qt/locale/test_bg.ts \
+                src/qt/locale/test_de.ts \
+                src/qt/locale/test_en.ts \
+                src/qt/locale/test_es.ts \
+                src/qt/locale/test_fi.ts \
+                src/qt/locale/test_fr.ts \
+                src/qt/locale/test_it.ts \
+                src/qt/locale/test_ja.ts \
+                src/qt/locale/test_pl.ts \
+                src/qt/locale/test_pt.ts \
+                src/qt/locale/test_ru.ts \
+                src/qt/locale/test_sk.ts \
+                src/qt/locale/test_sv.ts \
+                src/qt/locale/test_vi.ts \
+                src/qt/locale/test_zh_CN.ts \
+                src/qt/locale/test_zh_TW.ts

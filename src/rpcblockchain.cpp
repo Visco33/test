@@ -163,7 +163,7 @@ Value getrawmempool(const Array& params, bool fHelp)
             "{                           (json object)\n"
             "  \"transactionid\" : {       (json object)\n"
             "    \"size\" : n,             (numeric) transaction size in bytes\n"
-            "    \"fee\" : n,              (numeric) transaction fee in cub\n"
+            "    \"fee\" : n,              (numeric) transaction fee in test\n"
             "    \"time\" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT\n"
             "    \"height\" : n,           (numeric) block height when transaction entered pool\n"
             "    \"startingpriority\" : n, (numeric) priority when transaction entered pool\n"
@@ -403,8 +403,8 @@ Value gettxout(const Array& params, bool fHelp)
             "     \"hex\" : \"hex\",        (string) \n"
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
-            "     \"addresses\" : [          (array of string) array of cub addresses\n"
-            "     \"cubaddress\"   	 	(string) cub address\n"
+            "     \"addresses\" : [          (array of string) array of test addresses\n"
+            "     \"testaddress\"   	 	(string) test address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"
@@ -512,7 +512,7 @@ Value getblockchaininfo(const Array& params, bool fHelp)
     return obj;
 }
 
-/** Comparison function for sorting the getchaintcub heads.  */
+/** Comparison function for sorting the getchainttest heads.  */
 struct CompareBlocksByHeight {
     bool operator()(const CBlockIndex* a, const CBlockIndex* b) const
     {
@@ -526,12 +526,12 @@ struct CompareBlocksByHeight {
     }
 };
 
-Value getchaintcub(const Array& params, bool fHelp)
+Value getchainttest(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 0)
         throw runtime_error(
-            "getchaintcub\n"
-            "Return information about all known tcub in the block tree,"
+            "getchainttest\n"
+            "Return information about all known ttest in the block tree,"
             " including the main chain as well as orphaned branches.\n"
             "\nResult:\n"
             "[\n"
@@ -555,26 +555,26 @@ Value getchaintcub(const Array& params, bool fHelp)
             "4.  \"valid-fork\"            This branch is not part of the active chain, but is fully validated\n"
             "5.  \"active\"                This is the tip of the active main chain, which is certainly valid\n"
             "\nExamples:\n" +
-            HelpExampleCli("getchaintcub", "") + HelpExampleRpc("getchaintcub", ""));
+            HelpExampleCli("getchainttest", "") + HelpExampleRpc("getchainttest", ""));
 
-    /* Build up a list of chain tcub.  We start with the list of all
+    /* Build up a list of chain ttest.  We start with the list of all
        known blocks, and successively remove blocks that appear as pprev
        of another block.  */
-    std::set<const CBlockIndex*, CompareBlocksByHeight> setTcub;
+    std::set<const CBlockIndex*, CompareBlocksByHeight> setTtest;
     BOOST_FOREACH (const PAIRTYPE(const uint256, CBlockIndex*) & item, mapBlockIndex)
-        setTcub.insert(item.second);
+        setTtest.insert(item.second);
     BOOST_FOREACH (const PAIRTYPE(const uint256, CBlockIndex*) & item, mapBlockIndex) {
         const CBlockIndex* pprev = item.second->pprev;
         if (pprev)
-            setTcub.erase(pprev);
+            setTtest.erase(pprev);
     }
 
     // Always report the currently active tip.
-    setTcub.insert(chainActive.Tip());
+    setTtest.insert(chainActive.Tip());
 
     /* Construct the output array.  */
     Array res;
-    BOOST_FOREACH (const CBlockIndex* block, setTcub) {
+    BOOST_FOREACH (const CBlockIndex* block, setTtest) {
         Object obj;
         obj.push_back(Pair("height", block->nHeight));
         obj.push_back(Pair("hash", block->phashBlock->GetHex()));

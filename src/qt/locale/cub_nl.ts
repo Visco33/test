@@ -62,12 +62,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your CUB addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw CUBadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
+        <source>These are your test addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw testadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
     </message>
     <message>
-        <source>These are your CUB addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw CUBadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your test addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw testadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,16 +168,16 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>CUB will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Cubs from being stolen by malware infecting your computer.</source>
-        <translation>CUB zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw Cubs stelen.</translation>
+        <source>test will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tests from being stolen by malware infecting your computer.</source>
+        <translation>test zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw tests stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Cub&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW Cub VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR test&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW test VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -231,16 +231,16 @@
         <translation>&amp;BIP 38 Versleuteling</translation>
     </message>
     <message>
-        <source>Enter a Cub Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Voer een CUB adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
+        <source>Enter a test Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Voer een test adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adres:</translation>
     </message>
     <message>
-        <source>The CUB address to sign the message with</source>
-        <translation>Het CUB adres om het bericht met te ondertekenen</translation>
+        <source>The test address to sign the message with</source>
+        <translation>Het test adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -271,8 +271,8 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CUB address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het CUB adres bezit</translation>
+        <source>Sign the message to prove you own this test address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het test adres bezit</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -295,12 +295,12 @@
         <translation>Voer de BIP 38 versleutelde geheime sleutel in. Voer het wachtwoord in, in het middelste veld. Druk op Ontsleutelen Sleutel om de geheime sleutel te berekenen.  Nadat de geheime sleutel is ontsleuteld, zal het klikken op 'Adres Importeren' de geheime sleutel toevoegen aan de portemonnee.</translation>
     </message>
     <message>
-        <source>The CUB address the message was signed with</source>
-        <translation>Het CUB adres waarmee het bericht was ondertekend</translation>
+        <source>The test address the message was signed with</source>
+        <translation>Het test adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CUB address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde CUB adres</translation>
+        <source>Verify the message to ensure it was signed with the specified test address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde test adres</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -590,16 +590,16 @@
         <translation>Tabblad werkbalk</translation>
     </message>
     <message>
-        <source>Cub</source>
-        <translation>CUB Kern</translation>
+        <source>test</source>
+        <translation>test Kern</translation>
     </message>
     <message>
-        <source>Send coins to a CUB address</source>
-        <translation>Verstuur munten naar een CUB adres</translation>
+        <source>Send coins to a test address</source>
+        <translation>Verstuur munten naar een test adres</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and cub: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en CUB: URI's)</translation>
+        <source>Request payments (generates QR codes and test: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR-codes en test: URI's)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -610,24 +610,24 @@
         <translation>Bekijk masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Cub</source>
-        <translation>&amp;Over CUB Kern</translation>
+        <source>&amp;About test</source>
+        <translation>&amp;Over test Kern</translation>
     </message>
     <message>
-        <source>Show information about Cub</source>
-        <translation>Toon informatie over CUB Kern</translation>
+        <source>Show information about test</source>
+        <translation>Toon informatie over test Kern</translation>
     </message>
     <message>
-        <source>Modify configuration options for CUB</source>
-        <translation>Wijzig CUB configuratie opties</translation>
+        <source>Modify configuration options for test</source>
+        <translation>Wijzig test configuratie opties</translation>
     </message>
     <message>
-        <source>Sign messages with your CUB addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw CUB adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your test addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw test adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CUB addresses</source>
-        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde CUB adressen</translation>
+        <source>Verify messages to ensure they were signed with specified test addresses</source>
+        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde test adressen</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -757,8 +757,8 @@
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (cub.conf).</source>
-        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (cub.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (test.conf).</source>
+        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (test.conf).</translation>
     </message>
 </context>
 <context>
@@ -942,8 +942,8 @@
         <translation>Wijzig verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid CUB address.</source>
-        <translation>Het ingevoerde adres: "%1" is geen geldig CUB adres.</translation>
+        <source>The entered address "%1" is not a valid test address.</source>
+        <translation>Het ingevoerde adres: "%1" is geen geldig test adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -964,8 +964,8 @@
         <translation>versie</translation>
     </message>
     <message>
-        <source>Cub</source>
-        <translation>CUB Kern</translation>
+        <source>test</source>
+        <translation>test Kern</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -979,8 +979,8 @@
         <translation>Welkom</translation>
     </message>
     <message>
-        <source>Cub</source>
-        <translation>CUB Kern</translation>
+        <source>test</source>
+        <translation>test Kern</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1426,15 +1426,15 @@
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Cub is shutting down...</source>
-        <translation>Cub is aan het afsluiten...</translation>
+        <source>test is shutting down...</source>
+        <translation>test is aan het afsluiten...</translation>
     </message>
     </context>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The CUB address to sign the message with</source>
-        <translation>Het CUB adres om het bericht met te ondertekenen</translation>
+        <source>The test address to sign the message with</source>
+        <translation>Het test adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1465,16 +1465,16 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CUB address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het CUB adres bezit</translation>
+        <source>Sign the message to prove you own this test address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het test adres bezit</translation>
     </message>
     <message>
-        <source>The CUB address the message was signed with</source>
-        <translation>Het CUB adres waarmee het bericht was ondertekend</translation>
+        <source>The test address the message was signed with</source>
+        <translation>Het test adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified CUB address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde CUB adres</translation>
+        <source>Verify the message to ensure it was signed with the specified test address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde test adres</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1512,8 +1512,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Cub</source>
-        <translation>CUB Kern</translation>
+        <source>test</source>
+        <translation>test Kern</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -1660,7 +1660,7 @@
     </message>
     </context>
 <context>
-    <name>cub-core</name>
+    <name>test-core</name>
     <message>
         <source>Error</source>
         <translation>Error</translation>

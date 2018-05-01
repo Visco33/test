@@ -1,31 +1,31 @@
 #!/bin/bash
 #
-#  cubd The CUB core server.
+#  testd The test core server.
 #
 #
 # chkconfig: 345 80 20
-# description: cubd
-# processname: cubd
+# description: testd
+# processname: testd
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/cubd, see below
-if [ -f /etc/sysconfig/cubd ]; then
-        . /etc/sysconfig/cubd
+# you can override defaults in /etc/sysconfig/testd, see below
+if [ -f /etc/sysconfig/testd ]; then
+        . /etc/sysconfig/testd
 fi
 
 RETVAL=0
 
-prog=cubd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/cubd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/cubd}
+prog=testd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/testd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/testd}
 
-# cubd defaults to /usr/bin/cubd, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/cubd}
+# testd defaults to /usr/bin/testd, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/testd}
 
-# cubd opts default to -disablewallet, override with BITCOIND_OPTS
+# testd opts default to -disablewallet, override with BITCOIND_OPTS
 bitcoind_opts=${BITCOIND_OPTS}
 
 start() {

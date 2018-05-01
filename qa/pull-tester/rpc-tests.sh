@@ -21,7 +21,7 @@ if [ "x${ENABLE_BITCOIND}${ENABLE_UTILS}${ENABLE_WALLET}" = "x111" ]; then
   ${BUILDDIR}/qa/rpc-tests/mempool_resurrect_test.py --srcdir "${BUILDDIR}/src"
   ${BUILDDIR}/qa/rpc-tests/txn_doublespend.py --srcdir "${BUILDDIR}/src"
   ${BUILDDIR}/qa/rpc-tests/txn_doublespend.py --mineblock --srcdir "${BUILDDIR}/src"
-  ${BUILDDIR}/qa/rpc-tests/getchaintcub.py --srcdir "${BUILDDIR}/src"
+  ${BUILDDIR}/qa/rpc-tests/getchainttest.py --srcdir "${BUILDDIR}/src"
   ${BUILDDIR}/qa/rpc-tests/rest.py --srcdir "${BUILDDIR}/src"
   ${BUILDDIR}/qa/rpc-tests/mempool_spendcoinbase.py --srcdir "${BUILDDIR}/src"
   ${BUILDDIR}/qa/rpc-tests/httpbasics.py --srcdir "${BUILDDIR}/src"

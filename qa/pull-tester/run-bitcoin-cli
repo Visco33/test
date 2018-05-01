@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This is a thin wrapper around bitcoin-cli that strcub the Windows-style EOLs
+# This is a thin wrapper around bitcoin-cli that strtest the Windows-style EOLs
 # from the output if present. It is necessary when using bitcoin-cli.exe on
 # Linux since shells will interpret the line-endings as part of the result.
 

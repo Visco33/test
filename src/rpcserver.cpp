@@ -220,10 +220,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop CUB server.");
+            "\nStop test server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "CUB server stopping";
+    return "test server stopping";
 }
 
 
@@ -255,7 +255,7 @@ static const CRPCCommand vRPCCommands[] =
         {"blockchain", "getblock", &getblock, true, false, false},
         {"blockchain", "getblockhash", &getblockhash, true, false, false},
         {"blockchain", "getblockheader", &getblockheader, false, false, false},
-        {"blockchain", "getchaintcub", &getchaintcub, true, false, false},
+        {"blockchain", "getchainttest", &getchainttest, true, false, false},
         {"blockchain", "getdifficulty", &getdifficulty, true, false, false},
         {"blockchain", "getmempoolinfo", &getmempoolinfo, true, true, false},
         {"blockchain", "getrawmempool", &getrawmempool, true, false, false},
@@ -300,36 +300,36 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* Cub features */
-        {"cub", "masternode", &masternode, true, true, false},
-        {"cub", "listmasternodes", &listmasternodes, true, true, false},
-        {"cub", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"cub", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"cub", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"cub", "masternodedebug", &masternodedebug, true, true, false},
-        {"cub", "startmasternode", &startmasternode, true, true, false},
-        {"cub", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"cub", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"cub", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"cub", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"cub", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"cub", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"cub", "mnbudget", &mnbudget, true, true, false},
-        {"cub", "preparebudget", &preparebudget, true, true, false},
-        {"cub", "submitbudget", &submitbudget, true, true, false},
-        {"cub", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"cub", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"cub", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"cub", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"cub", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"cub", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"cub", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"cub", "checkbudgets", &checkbudgets, true, true, false},
-        {"cub", "mnsync", &mnsync, true, true, false},
-        {"cub", "spork", &spork, true, true, false},
-        {"cub", "getpoolinfo", &getpoolinfo, true, true, false},
+        /* test features */
+        {"test", "masternode", &masternode, true, true, false},
+        {"test", "listmasternodes", &listmasternodes, true, true, false},
+        {"test", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"test", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"test", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"test", "masternodedebug", &masternodedebug, true, true, false},
+        {"test", "startmasternode", &startmasternode, true, true, false},
+        {"test", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"test", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"test", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"test", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"test", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"test", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"test", "mnbudget", &mnbudget, true, true, false},
+        {"test", "preparebudget", &preparebudget, true, true, false},
+        {"test", "submitbudget", &submitbudget, true, true, false},
+        {"test", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"test", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"test", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"test", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"test", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"test", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"test", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"test", "checkbudgets", &checkbudgets, true, true, false},
+        {"test", "mnsync", &mnsync, true, true, false},
+        {"test", "spork", &spork, true, true, false},
+        {"test", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"cub", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"test", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -594,16 +594,16 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-                                             _("To use cubd, or the -server option to cub-qt, you must set an rpcpassword in the configuration file:\n"
+                                             _("To use testd, or the -server option to test-qt, you must set an rpcpassword in the configuration file:\n"
                                                "%s\n"
                                                "It is recommended you use the following random password:\n"
-                                               "rpcuser=cubrpc\n"
+                                               "rpcuser=testrpc\n"
                                                "rpcpassword=%s\n"
                                                "(you do not need to remember this password)\n"
                                                "The username and password MUST NOT be the same.\n"
                                                "If the file does not exist, create it with owner-readable-only file permissions.\n"
                                                "It is also recommended to set alertnotify so you are notified of problems;\n"
-                                               "for example: alertnotify=echo %%s | mail -s \"CUB Alert\" admin@foo.com\n"),
+                                               "for example: alertnotify=echo %%s | mail -s \"test Alert\" admin@foo.com\n"),
                                              GetConfigFile().string(),
                                              EncodeBase58(&rand_pwd[0], &rand_pwd[0] + 32)),
             "", CClientUIInterface::MSG_ERROR | CClientUIInterface::SECURE);
@@ -1054,7 +1054,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> cub-cli " + methodname + " " + args + "\n";
+    return "> test-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

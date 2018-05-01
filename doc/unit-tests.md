@@ -6,13 +6,13 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with 'make check'.
 
-To run the cubd tests manually, launch src/test/test_cub .
+To run the testd tests manually, launch src/test/test_test .
 
-To add more cubd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more testd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the test/ directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the cub-qt tests manually, launch src/qt/test/cub-qt_test
+To run the test-qt tests manually, launch src/qt/test/test-qt_test
 
-To add more cub-qt tests, add them to the `src/qt/test/` directory and
+To add more test-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.

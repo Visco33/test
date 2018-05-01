@@ -69,7 +69,7 @@ BOOST_AUTO_TEST_CASE(base58_DecodeBase58)
 
     BOOST_CHECK(!DecodeBase58("invalid", result));
 
-    // check that DecodeBase58 skcub whitespace, but still fails with unexpected non-whitespace at the end.
+    // check that DecodeBase58 sktest whitespace, but still fails with unexpected non-whitespace at the end.
     BOOST_CHECK(!DecodeBase58(" \t\n\v\f\r skip \r\f\v\n\t a", result));
     BOOST_CHECK( DecodeBase58(" \t\n\v\f\r skip \r\f\v\n\t ", result));
     std::vector<unsigned char> expected = ParseHex("971a55");

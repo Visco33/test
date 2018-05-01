@@ -33,7 +33,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::Cub)
+    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::test)
     {
     }
 
@@ -271,7 +271,7 @@ void OverviewPage::setWalletModel(WalletModel* model)
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("Cub")
+    // update the display unit, to not use the default ("test")
     updateDisplayUnit();
 }
 
@@ -310,15 +310,15 @@ void OverviewPage::updateObfuscationProgress()
     if (!pwalletMain) return;
 
     QString strAmountAndRounds;
-    QString strAnonymizeCubAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizeCubAmount * COIN, false, BitcoinUnits::separatorAlways);
+    QString strAnonymizetestAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizetestAmount * COIN, false, BitcoinUnits::separatorAlways);
 
     if (currentBalance == 0) {
         ui->obfuscationProgress->setValue(0);
         ui->obfuscationProgress->setToolTip(tr("No inputs detected"));
 
         // when balance is zero just show info from settings
-        strAnonymizeCubAmount = strAnonymizeCubAmount.remove(strAnonymizeCubAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeCubAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
+        strAnonymizetestAmount = strAnonymizetestAmount.remove(strAnonymizetestAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
+        strAmountAndRounds = strAnonymizetestAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
 
         ui->labelAmountRounds->setToolTip(tr("No inputs detected"));
         ui->labelAmountRounds->setText(strAmountAndRounds);
@@ -345,20 +345,20 @@ void OverviewPage::updateObfuscationProgress()
     CAmount nMaxToAnonymize = nAnonymizableBalance + currentAnonymizedBalance + nDenominatedUnconfirmedBalance;
 
     // If it's more than the anon threshold, limit to that.
-    if (nMaxToAnonymize > nAnonymizeCubAmount * COIN) nMaxToAnonymize = nAnonymizeCubAmount * COIN;
+    if (nMaxToAnonymize > nAnonymizetestAmount * COIN) nMaxToAnonymize = nAnonymizetestAmount * COIN;
 
     if (nMaxToAnonymize == 0) return;
 
-    if (nMaxToAnonymize >= nAnonymizeCubAmount * COIN) {
+    if (nMaxToAnonymize >= nAnonymizetestAmount * COIN) {
         ui->labelAmountRounds->setToolTip(tr("Found enough compatible inputs to anonymize %1")
-                                              .arg(strAnonymizeCubAmount));
-        strAnonymizeCubAmount = strAnonymizeCubAmount.remove(strAnonymizeCubAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeCubAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
+                                              .arg(strAnonymizetestAmount));
+        strAnonymizetestAmount = strAnonymizetestAmount.remove(strAnonymizetestAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
+        strAmountAndRounds = strAnonymizetestAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
     } else {
         QString strMaxToAnonymize = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nMaxToAnonymize, false, BitcoinUnits::separatorAlways);
         ui->labelAmountRounds->setToolTip(tr("Not enough compatible inputs to anonymize <span style='color:red;'>%1</span>,<br>"
                                              "will anonymize <span style='color:red;'>%2</span> instead")
-                                              .arg(strAnonymizeCubAmount)
+                                              .arg(strAnonymizetestAmount)
                                               .arg(strMaxToAnonymize));
         strMaxToAnonymize = strMaxToAnonymize.remove(strMaxToAnonymize.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
         strAmountAndRounds = "<span style='color:red;'>" +
@@ -529,7 +529,7 @@ void OverviewPage::toggleObfuscation()
 
         /* show obfuscation configuration if client has defaults set */
 
-        if (nAnonymizeCubAmount == 0) {
+        if (nAnonymizetestAmount == 0) {
             ObfuscationConfig dlg(this);
             dlg.setModel(walletModel);
             dlg.exec();

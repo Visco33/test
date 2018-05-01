@@ -58,7 +58,7 @@ public slots:
 
 private slots:
     void on_dataDirectory_textChanged(const QString& arg1);
-    void on_ellcubisButton_clicked();
+    void on_elltestisButton_clicked();
     void on_dataDirDefault_clicked();
     void on_dataDirCustom_clicked();
 

@@ -41,7 +41,7 @@ class HTTPBasicsTest (BitcoinTestFramework):
         assert_equal(conn.sock!=None, True) #according to http/1.1 connection must still be open!
         
         #send 2nd request without closing connection
-        conn.request('POST', '/', '{"method": "getchaintcub"}', headers)
+        conn.request('POST', '/', '{"method": "getchainttest"}', headers)
         out2 = conn.getresponse().read();
         assert_equal('"error":null' in out1, True) #must also response with a correct json-rpc message
         assert_equal(conn.sock!=None, True) #according to http/1.1 connection must still be open!
@@ -58,7 +58,7 @@ class HTTPBasicsTest (BitcoinTestFramework):
         assert_equal(conn.sock!=None, True) #according to http/1.1 connection must still be open!
         
         #send 2nd request without closing connection
-        conn.request('POST', '/', '{"method": "getchaintcub"}', headers)
+        conn.request('POST', '/', '{"method": "getchainttest"}', headers)
         out2 = conn.getresponse().read();
         assert_equal('"error":null' in out1, True) #must also response with a correct json-rpc message
         assert_equal(conn.sock!=None, True) #according to http/1.1 connection must still be open!

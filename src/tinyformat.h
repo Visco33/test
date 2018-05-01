@@ -543,7 +543,7 @@ private:
     // Print literal part of format string and return next format spec
     // position.
     //
-    // Skcub over any occurrences of '%%', printing a literal '%' to the
+    // Sktest over any occurrences of '%%', printing a literal '%' to the
     // output.  The position of the first % character of the next
     // nontrivial format spec is returned, or the end of string.
     static const char* printFormatStringLiteral(std::ostream& out,

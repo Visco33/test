@@ -1,6 +1,6 @@
-/* $Id: cubehash.c 227 2010-06-16 17:28:38Z tp $ */
+/* $Id: testehash.c 227 2010-06-16 17:28:38Z tp $ */
 /*
- * CubeHash implementation.
+ * testeHash implementation.
  *
  * ==========================(LICENSE BEGIN)============================
  *
@@ -34,39 +34,39 @@
 #include <string.h>
 #include <limits.h>
 
-#include "sph_cubehash.h"
+#include "sph_testehash.h"
 #ifdef __cplusplus
 extern "C"{
 #endif
 
-#if SPH_SMALL_FOOTPRINT && !defined SPH_SMALL_FOOTPRINT_CUBEHASH
-#define SPH_SMALL_FOOTPRINT_CUBEHASH   1
+#if SPH_SMALL_FOOTPRINT && !defined SPH_SMALL_FOOTPRINT_testEHASH
+#define SPH_SMALL_FOOTPRINT_testEHASH   1
 #endif
 
 /*
  * Some tests were conducted on an Intel Core2 Q6600 (32-bit and 64-bit
- * mode), a PowerPC G3, and a MCUB-compatible CPU (Broadcom BCM3302).
+ * mode), a PowerPC G3, and a Mtest-compatible CPU (Broadcom BCM3302).
  * It appears that the optimal settings are:
  *  -- full unroll, no state copy on the "big" systems (x86, PowerPC)
- *  -- unroll to 4 or 8, state copy on the "small" system (MCUB)
+ *  -- unroll to 4 or 8, state copy on the "small" system (Mtest)
  */
 
-#if SPH_SMALL_FOOTPRINT_CUBEHASH
+#if SPH_SMALL_FOOTPRINT_testEHASH
 
-#if !defined SPH_CUBEHASH_UNROLL
-#define SPH_CUBEHASH_UNROLL   4
+#if !defined SPH_testEHASH_UNROLL
+#define SPH_testEHASH_UNROLL   4
 #endif
-#if !defined SPH_CUBEHASH_NOCOPY
-#define SPH_CUBEHASH_NOCOPY   1
+#if !defined SPH_testEHASH_NOCOPY
+#define SPH_testEHASH_NOCOPY   1
 #endif
 
 #else
 
-#if !defined SPH_CUBEHASH_UNROLL
-#define SPH_CUBEHASH_UNROLL   0
+#if !defined SPH_testEHASH_UNROLL
+#define SPH_testEHASH_UNROLL   0
 #endif
-#if !defined SPH_CUBEHASH_NOCOPY
-#define SPH_CUBEHASH_NOCOPY   0
+#if !defined SPH_testEHASH_NOCOPY
+#define SPH_testEHASH_NOCOPY   0
 #endif
 
 #endif
@@ -134,7 +134,7 @@ static const sph_u32 IV512[] = {
 #define T32      SPH_T32
 #define ROTL32   SPH_ROTL32
 
-#if SPH_CUBEHASH_NOCOPY
+#if SPH_testEHASH_NOCOPY
 
 #define DECL_STATE
 #define READ_STATE(cc)
@@ -470,7 +470,7 @@ static const sph_u32 IV512[] = {
  * for small architectures.
  */
 
-#if SPH_CUBEHASH_UNROLL == 2
+#if SPH_testEHASH_UNROLL == 2
 
 #define SIXTEEN_ROUNDS   do { \
 		int j; \
@@ -480,7 +480,7 @@ static const sph_u32 IV512[] = {
 		} \
 	} while (0)
 
-#elif SPH_CUBEHASH_UNROLL == 4
+#elif SPH_testEHASH_UNROLL == 4
 
 #define SIXTEEN_ROUNDS   do { \
 		int j; \
@@ -492,7 +492,7 @@ static const sph_u32 IV512[] = {
 		} \
 	} while (0)
 
-#elif SPH_CUBEHASH_UNROLL == 8
+#elif SPH_testEHASH_UNROLL == 8
 
 #define SIXTEEN_ROUNDS   do { \
 		int j; \
@@ -532,14 +532,14 @@ static const sph_u32 IV512[] = {
 #endif
 
 static void
-cubehash_init(sph_cubehash_context *sc, const sph_u32 *iv)
+testehash_init(sph_testehash_context *sc, const sph_u32 *iv)
 {
 	memcpy(sc->state, iv, sizeof sc->state);
 	sc->ptr = 0;
 }
 
 static void
-cubehash_core(sph_cubehash_context *sc, const void *data, size_t len)
+testehash_core(sph_testehash_context *sc, const void *data, size_t len)
 {
 	unsigned char *buf;
 	size_t ptr;
@@ -576,7 +576,7 @@ cubehash_core(sph_cubehash_context *sc, const void *data, size_t len)
 }
 
 static void
-cubehash_close(sph_cubehash_context *sc, unsigned ub, unsigned n,
+testehash_close(sph_testehash_context *sc, unsigned ub, unsigned n,
 	void *dst, size_t out_size_w32)
 {
 	unsigned char *buf, *out;
@@ -603,120 +603,120 @@ cubehash_close(sph_cubehash_context *sc, unsigned ub, unsigned n,
 		sph_enc32le(out + (z << 2), sc->state[z]);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash224_init(void *cc)
+sph_testehash224_init(void *cc)
 {
-	cubehash_init(cc, IV224);
+	testehash_init(cc, IV224);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash224(void *cc, const void *data, size_t len)
+sph_testehash224(void *cc, const void *data, size_t len)
 {
-	cubehash_core(cc, data, len);
+	testehash_core(cc, data, len);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash224_close(void *cc, void *dst)
+sph_testehash224_close(void *cc, void *dst)
 {
-	sph_cubehash224_addbits_and_close(cc, 0, 0, dst);
+	sph_testehash224_addbits_and_close(cc, 0, 0, dst);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash224_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst)
+sph_testehash224_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst)
 {
-	cubehash_close(cc, ub, n, dst, 7);
-	sph_cubehash224_init(cc);
+	testehash_close(cc, ub, n, dst, 7);
+	sph_testehash224_init(cc);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash256_init(void *cc)
+sph_testehash256_init(void *cc)
 {
-	cubehash_init(cc, IV256);
+	testehash_init(cc, IV256);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash256(void *cc, const void *data, size_t len)
+sph_testehash256(void *cc, const void *data, size_t len)
 {
-	cubehash_core(cc, data, len);
+	testehash_core(cc, data, len);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash256_close(void *cc, void *dst)
+sph_testehash256_close(void *cc, void *dst)
 {
-	sph_cubehash256_addbits_and_close(cc, 0, 0, dst);
+	sph_testehash256_addbits_and_close(cc, 0, 0, dst);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash256_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst)
+sph_testehash256_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst)
 {
-	cubehash_close(cc, ub, n, dst, 8);
-	sph_cubehash256_init(cc);
+	testehash_close(cc, ub, n, dst, 8);
+	sph_testehash256_init(cc);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash384_init(void *cc)
+sph_testehash384_init(void *cc)
 {
-	cubehash_init(cc, IV384);
+	testehash_init(cc, IV384);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash384(void *cc, const void *data, size_t len)
+sph_testehash384(void *cc, const void *data, size_t len)
 {
-	cubehash_core(cc, data, len);
+	testehash_core(cc, data, len);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash384_close(void *cc, void *dst)
+sph_testehash384_close(void *cc, void *dst)
 {
-	sph_cubehash384_addbits_and_close(cc, 0, 0, dst);
+	sph_testehash384_addbits_and_close(cc, 0, 0, dst);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash384_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst)
+sph_testehash384_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst)
 {
-	cubehash_close(cc, ub, n, dst, 12);
-	sph_cubehash384_init(cc);
+	testehash_close(cc, ub, n, dst, 12);
+	sph_testehash384_init(cc);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash512_init(void *cc)
+sph_testehash512_init(void *cc)
 {
-	cubehash_init(cc, IV512);
+	testehash_init(cc, IV512);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash512(void *cc, const void *data, size_t len)
+sph_testehash512(void *cc, const void *data, size_t len)
 {
-	cubehash_core(cc, data, len);
+	testehash_core(cc, data, len);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash512_close(void *cc, void *dst)
+sph_testehash512_close(void *cc, void *dst)
 {
-	sph_cubehash512_addbits_and_close(cc, 0, 0, dst);
+	sph_testehash512_addbits_and_close(cc, 0, 0, dst);
 }
 
-/* see sph_cubehash.h */
+/* see sph_testehash.h */
 void
-sph_cubehash512_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst)
+sph_testehash512_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst)
 {
-	cubehash_close(cc, ub, n, dst, 16);
-	sph_cubehash512_init(cc);
+	testehash_close(cc, ub, n, dst, 16);
+	sph_testehash512_init(cc);
 }
 #ifdef __cplusplus
 }

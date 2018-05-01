@@ -1,9 +1,9 @@
-/* $Id: sph_cubehash.h 180 2010-05-08 02:29:25Z tp $ */
+/* $Id: sph_testehash.h 180 2010-05-08 02:29:25Z tp $ */
 /**
- * CubeHash interface. CubeHash is a family of functions which differ by
- * their output size; this implementation defines CubeHash for output
+ * testeHash interface. testeHash is a family of functions which differ by
+ * their output size; this implementation defines testeHash for output
  * sizes 224, 256, 384 and 512 bits, with the "standard parameters"
- * (CubeHash16/32 with the CubeHash specification notations).
+ * (testeHash16/32 with the testeHash specification notations).
  *
  * ==========================(LICENSE BEGIN)============================
  *
@@ -30,12 +30,12 @@
  *
  * ===========================(LICENSE END)=============================
  *
- * @file     sph_cubehash.h
+ * @file     sph_testehash.h
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_CUBEHASH_H__
-#define SPH_CUBEHASH_H__
+#ifndef SPH_testEHASH_H__
+#define SPH_testEHASH_H__
 
 #ifdef __cplusplus
 extern "C"{
@@ -45,32 +45,32 @@ extern "C"{
 #include "sph_types.h"
 
 /**
- * Output size (in bits) for CubeHash-224.
+ * Output size (in bits) for testeHash-224.
  */
-#define SPH_SIZE_cubehash224   224
+#define SPH_SIZE_testehash224   224
 
 /**
- * Output size (in bits) for CubeHash-256.
+ * Output size (in bits) for testeHash-256.
  */
-#define SPH_SIZE_cubehash256   256
+#define SPH_SIZE_testehash256   256
 
 /**
- * Output size (in bits) for CubeHash-384.
+ * Output size (in bits) for testeHash-384.
  */
-#define SPH_SIZE_cubehash384   384
+#define SPH_SIZE_testehash384   384
 
 /**
- * Output size (in bits) for CubeHash-512.
+ * Output size (in bits) for testeHash-512.
  */
-#define SPH_SIZE_cubehash512   512
+#define SPH_SIZE_testehash512   512
 
 /**
- * This structure is a context for CubeHash computations: it contains the
+ * This structure is a context for testeHash computations: it contains the
  * intermediate values and some data from the last entered block. Once
- * a CubeHash computation has been performed, the context can be reused for
+ * a testeHash computation has been performed, the context can be reused for
  * another computation.
  *
- * The contents of this structure are private. A running CubeHash computation
+ * The contents of this structure are private. A running testeHash computation
  * can be cloned by copying the context (e.g. with a simple
  * <code>memcpy()</code>).
  */
@@ -80,57 +80,57 @@ typedef struct {
 	size_t ptr;
 	sph_u32 state[32];
 #endif
-} sph_cubehash_context;
+} sph_testehash_context;
 
 /**
- * Type for a CubeHash-224 context (identical to the common context).
+ * Type for a testeHash-224 context (identical to the common context).
  */
-typedef sph_cubehash_context sph_cubehash224_context;
+typedef sph_testehash_context sph_testehash224_context;
 
 /**
- * Type for a CubeHash-256 context (identical to the common context).
+ * Type for a testeHash-256 context (identical to the common context).
  */
-typedef sph_cubehash_context sph_cubehash256_context;
+typedef sph_testehash_context sph_testehash256_context;
 
 /**
- * Type for a CubeHash-384 context (identical to the common context).
+ * Type for a testeHash-384 context (identical to the common context).
  */
-typedef sph_cubehash_context sph_cubehash384_context;
+typedef sph_testehash_context sph_testehash384_context;
 
 /**
- * Type for a CubeHash-512 context (identical to the common context).
+ * Type for a testeHash-512 context (identical to the common context).
  */
-typedef sph_cubehash_context sph_cubehash512_context;
+typedef sph_testehash_context sph_testehash512_context;
 
 /**
- * Initialize a CubeHash-224 context. This process performs no memory
+ * Initialize a testeHash-224 context. This process performs no memory
  * allocation.
  *
- * @param cc   the CubeHash-224 context (pointer to a
- *             <code>sph_cubehash224_context</code>)
+ * @param cc   the testeHash-224 context (pointer to a
+ *             <code>sph_testehash224_context</code>)
  */
-void sph_cubehash224_init(void *cc);
+void sph_testehash224_init(void *cc);
 
 /**
  * Process some data bytes. It is acceptable that <code>len</code> is zero
  * (in which case this function does nothing).
  *
- * @param cc     the CubeHash-224 context
+ * @param cc     the testeHash-224 context
  * @param data   the input data
  * @param len    the input data length (in bytes)
  */
-void sph_cubehash224(void *cc, const void *data, size_t len);
+void sph_testehash224(void *cc, const void *data, size_t len);
 
 /**
- * Terminate the current CubeHash-224 computation and output the result into
+ * Terminate the current testeHash-224 computation and output the result into
  * the provided buffer. The destination buffer must be wide enough to
  * accomodate the result (28 bytes). The context is automatically
  * reinitialized.
  *
- * @param cc    the CubeHash-224 context
+ * @param cc    the testeHash-224 context
  * @param dst   the destination buffer
  */
-void sph_cubehash224_close(void *cc, void *dst);
+void sph_testehash224_close(void *cc, void *dst);
 
 /**
  * Add a few additional bits (0 to 7) to the current computation, then
@@ -140,43 +140,43 @@ void sph_cubehash224_close(void *cc, void *dst);
  * numbered 7 downto 8-n (this is the big-endian convention at the byte
  * level). The context is automatically reinitialized.
  *
- * @param cc    the CubeHash-224 context
+ * @param cc    the testeHash-224 context
  * @param ub    the extra bits
  * @param n     the number of extra bits (0 to 7)
  * @param dst   the destination buffer
  */
-void sph_cubehash224_addbits_and_close(
+void sph_testehash224_addbits_and_close(
 	void *cc, unsigned ub, unsigned n, void *dst);
 
 /**
- * Initialize a CubeHash-256 context. This process performs no memory
+ * Initialize a testeHash-256 context. This process performs no memory
  * allocation.
  *
- * @param cc   the CubeHash-256 context (pointer to a
- *             <code>sph_cubehash256_context</code>)
+ * @param cc   the testeHash-256 context (pointer to a
+ *             <code>sph_testehash256_context</code>)
  */
-void sph_cubehash256_init(void *cc);
+void sph_testehash256_init(void *cc);
 
 /**
  * Process some data bytes. It is acceptable that <code>len</code> is zero
  * (in which case this function does nothing).
  *
- * @param cc     the CubeHash-256 context
+ * @param cc     the testeHash-256 context
  * @param data   the input data
  * @param len    the input data length (in bytes)
  */
-void sph_cubehash256(void *cc, const void *data, size_t len);
+void sph_testehash256(void *cc, const void *data, size_t len);
 
 /**
- * Terminate the current CubeHash-256 computation and output the result into
+ * Terminate the current testeHash-256 computation and output the result into
  * the provided buffer. The destination buffer must be wide enough to
  * accomodate the result (32 bytes). The context is automatically
  * reinitialized.
  *
- * @param cc    the CubeHash-256 context
+ * @param cc    the testeHash-256 context
  * @param dst   the destination buffer
  */
-void sph_cubehash256_close(void *cc, void *dst);
+void sph_testehash256_close(void *cc, void *dst);
 
 /**
  * Add a few additional bits (0 to 7) to the current computation, then
@@ -186,43 +186,43 @@ void sph_cubehash256_close(void *cc, void *dst);
  * numbered 7 downto 8-n (this is the big-endian convention at the byte
  * level). The context is automatically reinitialized.
  *
- * @param cc    the CubeHash-256 context
+ * @param cc    the testeHash-256 context
  * @param ub    the extra bits
  * @param n     the number of extra bits (0 to 7)
  * @param dst   the destination buffer
  */
-void sph_cubehash256_addbits_and_close(
+void sph_testehash256_addbits_and_close(
 	void *cc, unsigned ub, unsigned n, void *dst);
 
 /**
- * Initialize a CubeHash-384 context. This process performs no memory
+ * Initialize a testeHash-384 context. This process performs no memory
  * allocation.
  *
- * @param cc   the CubeHash-384 context (pointer to a
- *             <code>sph_cubehash384_context</code>)
+ * @param cc   the testeHash-384 context (pointer to a
+ *             <code>sph_testehash384_context</code>)
  */
-void sph_cubehash384_init(void *cc);
+void sph_testehash384_init(void *cc);
 
 /**
  * Process some data bytes. It is acceptable that <code>len</code> is zero
  * (in which case this function does nothing).
  *
- * @param cc     the CubeHash-384 context
+ * @param cc     the testeHash-384 context
  * @param data   the input data
  * @param len    the input data length (in bytes)
  */
-void sph_cubehash384(void *cc, const void *data, size_t len);
+void sph_testehash384(void *cc, const void *data, size_t len);
 
 /**
- * Terminate the current CubeHash-384 computation and output the result into
+ * Terminate the current testeHash-384 computation and output the result into
  * the provided buffer. The destination buffer must be wide enough to
  * accomodate the result (48 bytes). The context is automatically
  * reinitialized.
  *
- * @param cc    the CubeHash-384 context
+ * @param cc    the testeHash-384 context
  * @param dst   the destination buffer
  */
-void sph_cubehash384_close(void *cc, void *dst);
+void sph_testehash384_close(void *cc, void *dst);
 
 /**
  * Add a few additional bits (0 to 7) to the current computation, then
@@ -232,43 +232,43 @@ void sph_cubehash384_close(void *cc, void *dst);
  * numbered 7 downto 8-n (this is the big-endian convention at the byte
  * level). The context is automatically reinitialized.
  *
- * @param cc    the CubeHash-384 context
+ * @param cc    the testeHash-384 context
  * @param ub    the extra bits
  * @param n     the number of extra bits (0 to 7)
  * @param dst   the destination buffer
  */
-void sph_cubehash384_addbits_and_close(
+void sph_testehash384_addbits_and_close(
 	void *cc, unsigned ub, unsigned n, void *dst);
 
 /**
- * Initialize a CubeHash-512 context. This process performs no memory
+ * Initialize a testeHash-512 context. This process performs no memory
  * allocation.
  *
- * @param cc   the CubeHash-512 context (pointer to a
- *             <code>sph_cubehash512_context</code>)
+ * @param cc   the testeHash-512 context (pointer to a
+ *             <code>sph_testehash512_context</code>)
  */
-void sph_cubehash512_init(void *cc);
+void sph_testehash512_init(void *cc);
 
 /**
  * Process some data bytes. It is acceptable that <code>len</code> is zero
  * (in which case this function does nothing).
  *
- * @param cc     the CubeHash-512 context
+ * @param cc     the testeHash-512 context
  * @param data   the input data
  * @param len    the input data length (in bytes)
  */
-void sph_cubehash512(void *cc, const void *data, size_t len);
+void sph_testehash512(void *cc, const void *data, size_t len);
 
 /**
- * Terminate the current CubeHash-512 computation and output the result into
+ * Terminate the current testeHash-512 computation and output the result into
  * the provided buffer. The destination buffer must be wide enough to
  * accomodate the result (64 bytes). The context is automatically
  * reinitialized.
  *
- * @param cc    the CubeHash-512 context
+ * @param cc    the testeHash-512 context
  * @param dst   the destination buffer
  */
-void sph_cubehash512_close(void *cc, void *dst);
+void sph_testehash512_close(void *cc, void *dst);
 
 /**
  * Add a few additional bits (0 to 7) to the current computation, then
@@ -278,12 +278,12 @@ void sph_cubehash512_close(void *cc, void *dst);
  * numbered 7 downto 8-n (this is the big-endian convention at the byte
  * level). The context is automatically reinitialized.
  *
- * @param cc    the CubeHash-512 context
+ * @param cc    the testeHash-512 context
  * @param ub    the extra bits
  * @param n     the number of extra bits (0 to 7)
  * @param dst   the destination buffer
  */
-void sph_cubehash512_addbits_and_close(
+void sph_testehash512_addbits_and_close(
 	void *cc, unsigned ub, unsigned n, void *dst);
 #ifdef __cplusplus
 }

@@ -42,7 +42,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-#error "CUB cannot be compiled without assertions."
+#error "test cannot be compiled without assertions."
 #endif
 
 /**
@@ -2024,7 +2024,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("cub-scriptch");
+    RenameThread("test-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -3119,7 +3119,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 nHeight = (*mi).second->nHeight + 1;
         }
 
-        // CUB
+        // test
         // It is entierly possible that we don't have enough data and this could fail
         // (i.e. the block could indeed be valid). Store the block for later consideration
         // but issue an initial reject message.

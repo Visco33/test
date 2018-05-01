@@ -1,19 +1,19 @@
 [Unit]
-Description=CUB's distributed currency daemon
+Description=test's distributed currency daemon
 After=network.target
 
 [Service]
-User=cub
-Group=cub
+User=test
+Group=test
 
 Type=forking
-PIDFile=/var/lib/cubd/cubd.pid
+PIDFile=/var/lib/testd/testd.pid
 
-ExecStart=/usr/bin/cubd -daemon -pid=/var/lib/cubd/cubd.pid \
-          -conf=/etc/cub/cub.conf -datadir=/var/lib/cubd
+ExecStart=/usr/bin/testd -daemon -pid=/var/lib/testd/testd.pid \
+          -conf=/etc/test/test.conf -datadir=/var/lib/testd
 
-ExecStop=-/usr/bin/cub-cli -conf=/etc/cub/cub.conf \
-         -datadir=/var/lib/cubd stop
+ExecStop=-/usr/bin/test-cli -conf=/etc/test/test.conf \
+         -datadir=/var/lib/testd stop
 
 Restart=always
 PrivateTmp=true

@@ -20,7 +20,7 @@ from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
 from util import *
 from netutil import *
 
-def run_bind_test(tmpdir, allow_cub, connect_to, addresses, expected):
+def run_bind_test(tmpdir, allow_test, connect_to, addresses, expected):
     '''
     Start a node with requested rpcallowip and rpcbind parameters,
     then try to connect, and check if the set of bound addresses
@@ -28,8 +28,8 @@ def run_bind_test(tmpdir, allow_cub, connect_to, addresses, expected):
     '''
     expected = [(addr_to_hex(addr), port) for (addr, port) in expected]
     base_args = ['-disablewallet', '-nolisten']
-    if allow_cub:
-        base_args += ['-rpcallowip=' + x for x in allow_cub]
+    if allow_test:
+        base_args += ['-rpcallowip=' + x for x in allow_test]
     binds = ['-rpcbind='+addr for addr in addresses]
     nodes = start_nodes(1, tmpdir, [base_args + binds], connect_to)
     try:
@@ -39,12 +39,12 @@ def run_bind_test(tmpdir, allow_cub, connect_to, addresses, expected):
         stop_nodes(nodes)
         wait_bitcoinds()
 
-def run_allowip_test(tmpdir, allow_cub, rpchost, rpcport):
+def run_allowip_test(tmpdir, allow_test, rpchost, rpcport):
     '''
     Start a node with rpcwallow IP, and request getinfo
     at a non-localhost IP.
     '''
-    base_args = ['-disablewallet', '-nolisten'] + ['-rpcallowip='+x for x in allow_cub]
+    base_args = ['-disablewallet', '-nolisten'] + ['-rpcallowip='+x for x in allow_test]
     nodes = start_nodes(1, tmpdir, [base_args])
     try:
         # connect to node through non-loopback interface

@@ -1,32 +1,32 @@
-Cub
+test
 =====================
 
 Setup
 ---------------------
-[Cub](http://test.cash/) is the original Cub client and it builds the backbone of the network. However, it downloads and stores the entire history of Cub transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[test](http://test.cash/) is the original test client and it builds the backbone of the network. However, it downloads and stores the entire history of test transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Cub on your native platform.
+The following are some helpful notes on how to run test on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- bin/32/cub-qt (GUI, 32-bit) or bin/32/cubd (headless, 32-bit)
-- bin/64/cub-qt (GUI, 64-bit) or bin/64/cubd (headless, 64-bit)
+- bin/32/test-qt (GUI, 32-bit) or bin/32/testd (headless, 32-bit)
+- bin/64/test-qt (GUI, 64-bit) or bin/64/testd (headless, 64-bit)
 
 ### Windows
 
-Unpack the files into a directory, and then run cub-qt.exe.
+Unpack the files into a directory, and then run test-qt.exe.
 
 ### OSX
 
-Drag Cub-Qt to your applications folder, and then run Cub-Qt.
+Drag test-Qt to your applications folder, and then run test-Qt.
 
 Building
 ---------------------
-The following are developer notes on how to build Cub on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build test on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -34,7 +34,7 @@ The following are developer notes on how to build Cub on your native platform. T
 
 Development
 ---------------------
-The Cub repo's [root README](https://github.com/testtest/cub/blob/master/README.md) contains relevant information on the development process and automated testing.
+The test repo's [root README](https://github.com/testtest/test/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

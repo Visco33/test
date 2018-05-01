@@ -46,10 +46,10 @@ static bool AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || mapArgs.count("-?") || mapArgs.count("-help")) {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Cub cub-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("test test-tx utility version") + " " + FormatFullVersion() + "\n\n" +
                                _("Usage:") + "\n" +
-                               "  cub-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded cub transaction") + "\n" +
-                               "  cub-tx [options] -create [commands]   " + _("Create hex-encoded cub transaction") + "\n" +
+                               "  test-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded test transaction") + "\n" +
+                               "  test-tx [options] -create [commands]   " + _("Create hex-encoded test transaction") + "\n" +
                                "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());
@@ -550,7 +550,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw runtime_error("too few parameters");
 
-            // param: hex-encoded cub transaction
+            // param: hex-encoded test transaction
             string strHexTx(argv[1]);
             if (strHexTx == "-") // "-" implies standard input
                 strHexTx = readStdin();

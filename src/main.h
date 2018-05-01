@@ -10,7 +10,7 @@
 #define BITCOIN_MAIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/cub-config.h"
+#include "config/test-config.h"
 #endif
 
 #include "amount.h"
@@ -48,7 +48,7 @@ class CInv;
 class CScriptCheck;
 class CValidationInterface;
 class CValidationState;
-class CCub;
+class Ctest;
 
 struct CBlockTemplate;
 struct CNodeStateStats;

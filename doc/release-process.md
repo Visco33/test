@@ -3,7 +3,7 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping Fuzzbawls on Slack) see [translation_process.md](https://github.com/testtest/cub/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping Fuzzbawls on Slack) see [translation_process.md](https://github.com/testtest/test/blob/master/doc/translation_process.md#synchronising-translations).
 
 Before every minor and major release:
 
@@ -24,12 +24,12 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/cubcoin/gitian.sigs.git
-    git clone https://github.com/testtest/cub-detached-sigs.git
+    git clone https://github.com/testcoin/gitian.sigs.git
+    git clone https://github.com/testtest/test-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/testtest/cub.git
+    git clone https://github.com/testtest/test.git
 
-### Cub maintainers/release engineers, suggestion for writing release notes
+### test maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -50,7 +50,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./cub
+    pushd ./test
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -84,7 +84,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../cub/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../test/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -92,50 +92,50 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url cub=/path/to/cub,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url test=/path/to/test,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Cub for Linux, Windows, and OS X:
+### Build and sign test for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --memory 3000 --commit cub=v${VERSION} ../cub/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../cub/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/cub-*.tar.gz build/out/src/cub-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit test=v${VERSION} ../test/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../test/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/test-*.tar.gz build/out/src/test-*.tar.gz ../
 
-    ./bin/gbuild --memory 3000 --commit cub=v${VERSION} ../cub/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../cub/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/cub-*-win-unsigned.tar.gz inputs/cub-win-unsigned.tar.gz
-    mv build/out/cub-*.zip build/out/cub-*.exe ../
+    ./bin/gbuild --memory 3000 --commit test=v${VERSION} ../test/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../test/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/test-*-win-unsigned.tar.gz inputs/test-win-unsigned.tar.gz
+    mv build/out/test-*.zip build/out/test-*.exe ../
 
-    ./bin/gbuild --memory 3000 --commit cub=v${VERSION} ../cub/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../cub/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/cub-*-osx-unsigned.tar.gz inputs/cub-osx-unsigned.tar.gz
-    mv build/out/cub-*.tar.gz build/out/cub-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit test=v${VERSION} ../test/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../test/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/test-*-osx-unsigned.tar.gz inputs/test-osx-unsigned.tar.gz
+    mv build/out/test-*.tar.gz build/out/test-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`cub-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`cub-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zcub (`cub-${VERSION}-win[32|64]-setup-unsigned.exe`, `cub-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`cub-${VERSION}-osx-unsigned.dmg`, `cub-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`test-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`test-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist ztest (`test-${VERSION}-win[32|64]-setup-unsigned.exe`, `test-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`test-${VERSION}-osx-unsigned.dmg`, `test-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import cub/contrib/gitian-keys/*.pgp
+    gpg --import test/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../cub/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../cub/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../cub/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../test/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../test/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../test/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -156,22 +156,22 @@ Codesigner only: Create Windows/OS X detached signatures:
 
 Codesigner only: Sign the osx binary:
 
-    transfer cub-osx-unsigned.tar.gz to osx for signing
-    tar xf cub-osx-unsigned.tar.gz
+    transfer test-osx-unsigned.tar.gz to osx for signing
+    tar xf test-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf cub-win-unsigned.tar.gz
+    tar xf test-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/cub-detached-sigs
+    cd ~/test-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -188,20 +188,20 @@ Non-codesigners: wait for Windows/OS X detached signatures:
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../cub/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../cub/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../cub/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/cub-osx-signed.dmg ../cub-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../test/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../test/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../test/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/test-osx-signed.dmg ../test-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../cub/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../cub/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../cub/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/cub-*win64-setup.exe ../cub-${VERSION}-win64-setup.exe
-    mv build/out/cub-*win32-setup.exe ../cub-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../test/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../test/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../test/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/test-*win64-setup.exe ../test-${VERSION}-win64-setup.exe
+    mv build/out/test-*win32-setup.exe ../test-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -223,17 +223,17 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-cub-${VERSION}-aarch64-linux-gnu.tar.gz
-cub-${VERSION}-arm-linux-gnueabihf.tar.gz
-cub-${VERSION}-i686-pc-linux-gnu.tar.gz
-cub-${VERSION}-x86_64-linux-gnu.tar.gz
-cub-${VERSION}-osx64.tar.gz
-cub-${VERSION}-osx.dmg
-cub-${VERSION}.tar.gz
-cub-${VERSION}-win32-setup.exe
-cub-${VERSION}-win32.zip
-cub-${VERSION}-win64-setup.exe
-cub-${VERSION}-win64.zip
+test-${VERSION}-aarch64-linux-gnu.tar.gz
+test-${VERSION}-arm-linux-gnueabihf.tar.gz
+test-${VERSION}-i686-pc-linux-gnu.tar.gz
+test-${VERSION}-x86_64-linux-gnu.tar.gz
+test-${VERSION}-osx64.tar.gz
+test-${VERSION}-osx.dmg
+test-${VERSION}.tar.gz
+test-${VERSION}-win32-setup.exe
+test-${VERSION}-win32.zip
+test-${VERSION}-win64-setup.exe
+test-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
@@ -249,16 +249,16 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zcub and installers, as well as `SHA256SUMS.asc` from last step, to the GitHub release (see below)
+- Upload ztest and installers, as well as `SHA256SUMS.asc` from last step, to the GitHub release (see below)
 
 - Announce the release:
 
   - bitcointalk announcement thread
 
-  - Optionally twitter, reddit /r/cub, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/test, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/testtest/cub/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/testtest/test/releases/new) with a link to the archived release notes.
 
   - Celebrate

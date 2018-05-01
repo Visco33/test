@@ -62,12 +62,12 @@
         <translation>Vastaanottavat osoitteet</translation>
     </message>
     <message>
-        <source>These are your Cub addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat sinun Cub osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your test addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat sinun test osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your Cub addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Nämä ovat sinun Cub osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
+        <source>These are your test addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Nämä ovat sinun test osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -164,16 +164,16 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>Cub will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Cubs from being stolen by malware infecting your computer.</source>
-        <translation>Cub sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella Cubien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>test will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your tests from being stolen by malware infecting your computer.</source>
+        <translation>test sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella testien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Oletko varma että tahdot salata lompakkosi?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Cub&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki Cubisi&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR test&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki testisi&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -227,8 +227,8 @@
         <translation>&amp;BIP 38 Salaus</translation>
     </message>
     <message>
-        <source>Enter a Cub Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Syötä Cub osoite, jonnka tahtoisit salata käyttäen BIP 38.
+        <source>Enter a test Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Syötä test osoite, jonnka tahtoisit salata käyttäen BIP 38.
 Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityisavaimen.</translation>
     </message>
     <message>
@@ -236,8 +236,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Osoite:</translation>
     </message>
     <message>
-        <source>The Cub address to sign the message with</source>
-        <translation>Cub osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The test address to sign the message with</source>
+        <translation>test osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -268,8 +268,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Cub address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Cub osoitteen</translation>
+        <source>Sign the message to prove you own this test address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän test osoitteen</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -288,8 +288,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>&amp;BIP 38 salauksen avaus</translation>
     </message>
     <message>
-        <source>The Cub address the message was signed with</source>
-        <translation>Cub osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The test address the message was signed with</source>
+        <translation>test osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -575,16 +575,16 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>&amp;Apua</translation>
     </message>
     <message>
-        <source>Cub</source>
-        <translation>Cub Ydin</translation>
+        <source>test</source>
+        <translation>test Ydin</translation>
     </message>
     <message>
-        <source>Send coins to a Cub address</source>
-        <translation>Lähetä kolikkoja Cub osoitteeseen</translation>
+        <source>Send coins to a test address</source>
+        <translation>Lähetä kolikkoja test osoitteeseen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and cub: URIs)</source>
-        <translation>Pyydä maksuja (Generoi QR koodeja ja cub: URIja)</translation>
+        <source>Request payments (generates QR codes and test: URIs)</source>
+        <translation>Pyydä maksuja (Generoi QR koodeja ja test: URIja)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -595,24 +595,24 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Selaa masternodeja</translation>
     </message>
     <message>
-        <source>&amp;About Cub</source>
-        <translation>Cub &amp;ytimestä</translation>
+        <source>&amp;About test</source>
+        <translation>test &amp;ytimestä</translation>
     </message>
     <message>
-        <source>Show information about Cub</source>
-        <translation>Näytä tietoja Cub Ytimestä</translation>
+        <source>Show information about test</source>
+        <translation>Näytä tietoja test Ytimestä</translation>
     </message>
     <message>
-        <source>Modify configuration options for Cub</source>
-        <translation>Muokkaa konfiguraatio vaihtoehtoja Cub:lle</translation>
+        <source>Modify configuration options for test</source>
+        <translation>Muokkaa konfiguraatio vaihtoehtoja test:lle</translation>
     </message>
     <message>
-        <source>Sign messages with your Cub addresses to prove you own them</source>
+        <source>Sign messages with your test addresses to prove you own them</source>
         <translation>Allekirjoita viestejä todistaaksesi, että omistat ne.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Cub addresses</source>
-        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä Cub osoiteella.</translation>
+        <source>Verify messages to ensure they were signed with specified test addresses</source>
+        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä test osoiteella.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -643,8 +643,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Avaa Masternode konfiguraatiotiedosto</translation>
     </message>
     <message>
-        <source>Open a Cub: URI or payment request</source>
-        <translation>Avaa Cub: URI tai pyydä maksua</translation>
+        <source>Open a test: URI or payment request</source>
+        <translation>Avaa test: URI tai pyydä maksua</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -655,12 +655,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Lohkon tutkija näkymä</translation>
     </message>
     <message>
-        <source>Show the Cub help message to get a list with possible Cub command-line options</source>
-        <translation>Näytä Cub Ydin apuviesti saadaksesi lista mahdollisista Cub komentolinja komennoista.</translation>
+        <source>Show the test help message to get a list with possible test command-line options</source>
+        <translation>Näytä test Ydin apuviesti saadaksesi lista mahdollisista test komentolinja komennoista.</translation>
     </message>
     <message>
-        <source>Cub client</source>
-        <translation>Cub Ydin asiakasohjelma</translation>
+        <source>test client</source>
+        <translation>test Ydin asiakasohjelma</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -894,8 +894,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Cub</source>
-        <translation>Cub Ydin</translation>
+        <source>test</source>
+        <translation>test Ydin</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -913,12 +913,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Tervetuloa</translation>
     </message>
     <message>
-        <source>Welcome to Cub.</source>
-        <translation>Tervetuloa Cub Ytimeen.</translation>
+        <source>Welcome to test.</source>
+        <translation>Tervetuloa test Ytimeen.</translation>
     </message>
     <message>
-        <source>Cub</source>
-        <translation>Cub Ydin</translation>
+        <source>test</source>
+        <translation>test Ydin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1091,32 +1091,32 @@ Please check the address and try again.</source>
         <translation>Valitse yksityisyyden taso.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 Cub</source>
-        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 Cub</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 test</source>
+        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 test</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 Cub</source>
-        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 Cub</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 test</source>
+        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 test</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Käytä 16 erillistä masternodea</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 Cub to anonymize 10000 Cub</source>
-        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 Cub anonymoidaksesi 10000 Cub</translation>
+        <source>This option is the quickest and will cost about ~0.025 test to anonymize 10000 test</source>
+        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 test anonymoidaksesi 10000 test</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 Cub to anonymize 10000 Cub</source>
-        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 Cub anonymoidaksesi 10000 Cub</translation>
+        <source>This option is moderately fast and will cost about 0.05 test to anonymize 10000 test</source>
+        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 test anonymoidaksesi 10000 test</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Tämä on hitain ja turvallisin vaihtoehto. Täydesti anonymisoiminen ei maksa mitään.</translation>
     </message>
     <message>
-        <source>0.1 Cub per 10000 Cub you anonymize.</source>
-        <translation>0.1 per 10000 Cub, jotka anonymisoit.</translation>
+        <source>0.1 test per 10000 test you anonymize.</source>
+        <translation>0.1 per 10000 test, jotka anonymisoit.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1165,12 +1165,12 @@ Please check the address and try again.</source>
         <translation>Ekspertti</translation>
     </message>
     <message>
-        <source>Automatically start Cub after logging in to the system.</source>
-        <translation>Automaattisesti käynnistä Cub kun kirjaudut sisään.</translation>
+        <source>Automatically start test after logging in to the system.</source>
+        <translation>Automaattisesti käynnistä test kun kirjaudut sisään.</translation>
     </message>
     <message>
-        <source>&amp;Start Cub on system login</source>
-        <translation>&amp;Aloita Cub järjestelmän kirjautumisessa</translation>
+        <source>&amp;Start test on system login</source>
+        <translation>&amp;Aloita test järjestelmän kirjautumisessa</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1315,8 +1315,8 @@ Please check the address and try again.</source>
         <translation>Ulos:</translation>
     </message>
     <message>
-        <source>Welcome to the Cub RPC console.</source>
-        <translation>Tervetuloa Cub RPC konsoliin.</translation>
+        <source>Welcome to the test RPC console.</source>
+        <translation>Tervetuloa test RPC konsoliin.</translation>
     </message>
     <message>
         <source>never</source>
@@ -1503,8 +1503,8 @@ Please check the address and try again.</source>
         <translation>ei</translation>
     </message>
     <message>
-        <source>0 Cub</source>
-        <translation>0 Cub</translation>
+        <source>0 test</source>
+        <translation>0 test</translation>
     </message>
     <message>
         <source>Choose...</source>
@@ -1608,8 +1608,8 @@ Please check the address and try again.</source>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Cub address to sign the message with</source>
-        <translation>Cub osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The test address to sign the message with</source>
+        <translation>test osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1632,12 +1632,12 @@ Please check the address and try again.</source>
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Cub address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Cub osoitteen</translation>
+        <source>Sign the message to prove you own this test address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän test osoitteen</translation>
     </message>
     <message>
-        <source>The Cub address the message was signed with</source>
-        <translation>Cub osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The test address the message was signed with</source>
+        <translation>test osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1675,8 +1675,8 @@ Please check the address and try again.</source>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Cub</source>
-        <translation>Cub Ydin</translation>
+        <source>test</source>
+        <translation>test Ydin</translation>
     </message>
     </context>
 <context>
@@ -1887,7 +1887,7 @@ Please check the address and try again.</source>
     </message>
     </context>
 <context>
-    <name>cub-core</name>
+    <name>test-core</name>
     <message>
         <source>Error</source>
         <translation>Virhe</translation>

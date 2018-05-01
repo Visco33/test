@@ -1,6 +1,6 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build cubd (headless client) for OSX.
+This guide will show you how to build testd (headless client) for OSX.
 
 Notes
 -----
@@ -40,14 +40,14 @@ Instructions: Homebrew
 
         brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf qt5
 
-### Building `cubd`
+### Building `testd`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/testtest/cub.git
-        cd cub
+        git clone https://github.com/testtest/test.git
+        cd test
 
-2.  Build cubd:
+2.  Build testd:
 
         ./autogen.sh
         ./configure --with-gui=qt5
@@ -57,7 +57,7 @@ Instructions: Homebrew
 
         make check
 
-4.  (Optional) You can also install cubd to your path:
+4.  (Optional) You can also install testd to your path:
 
         make install
 
@@ -69,7 +69,7 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 1. Make sure you installed everything through homebrew mentioned above
 2. Do a proper ./configure --with-gui=qt5 --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "cub-qt" as project name, enter src/qt as location
+4. Enter "test-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -79,11 +79,11 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 
 Creating a release build
 ------------------------
-You can ignore this section if you are building `cubd` for your own use.
+You can ignore this section if you are building `testd` for your own use.
 
-cubd/cub-cli binaries are not included in the cub-Qt.app bundle.
+testd/test-cli binaries are not included in the test-Qt.app bundle.
 
-If you are building `cubd` or `cub-qt` for others, your build machine should be set up
+If you are building `testd` or `test-qt` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -92,30 +92,30 @@ All dependencies should be compiled with these flags:
  -arch x86_64
  -isysroot $(xcode-select --print-path)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
 
-Once dependencies are compiled, see release-process.md for how the Cub-Qt.app
+Once dependencies are compiled, see release-process.md for how the test-Qt.app
 bundle is packaged and signed to create the .dmg disk image that is distributed.
 
 Running
 -------
 
-It's now available at `./cubd`, provided that you are still in the `src`
+It's now available at `./testd`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./cubd` to get the filename where it should be put, or just try these
+Run `./testd` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=cubrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/cub/cub.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/cub/cub.conf"
+    echo -e "rpcuser=testrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/test/test.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/test/test.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
 you can monitor its process by looking at the debug.log file, like this:
 
-    tail -f $HOME/Library/Application\ Support/cub/debug.log
+    tail -f $HOME/Library/Application\ Support/test/debug.log
 
 Other commands:
 -------
 
-    ./cubd -daemon # to start the cub daemon.
-    ./cub-cli --help  # for a list of command-line options.
-    ./cub-cli help    # When the daemon is running, to get a list of RPC commands
+    ./testd -daemon # to start the test daemon.
+    ./test-cli --help  # for a list of command-line options.
+    ./test-cli help    # When the daemon is running, to get a list of RPC commands

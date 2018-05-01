@@ -1,8 +1,8 @@
-/* src/config/cub-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/test-config.h.in.  Generated from configure.ac by autoheader.  */
 
-#ifndef Cub_CONFIG_H
+#ifndef test_CONFIG_H
 
-#define Cub_CONFIG_H
+#define test_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 #undef AC_APPLE_UNIVERSAL_BUILD
@@ -339,4 +339,4 @@
 /* Define for large files, on AIX-style hosts. */
 #undef _LARGE_FILES
 
-#endif //Cub_CONFIG_H
+#endif //test_CONFIG_H

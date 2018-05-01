@@ -1,6 +1,6 @@
 [Protocol]
-exec=cub-qt '%u'
-protocol=cub
+exec=test-qt '%u'
+protocol=test
 input=none
 output=none
 helper=true

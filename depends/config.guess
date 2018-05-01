@@ -463,10 +463,10 @@ case "${UNAME_MACHINE}:${UNAME_SYSTEM}:${UNAME_RELEASE}:${UNAME_VERSION}" in
 	echo powerpc-apple-machten${UNAME_RELEASE}
 	exit ;;
     RISC*:Mach:*:*)
-	echo mcub-dec-mach_bsd4.3
+	echo mtest-dec-mach_bsd4.3
 	exit ;;
     RISC*:ULTRIX:*:*)
-	echo mcub-dec-ultrix${UNAME_RELEASE}
+	echo mtest-dec-ultrix${UNAME_RELEASE}
 	exit ;;
     VAX*:ULTRIX*:*:*)
 	echo vax-dec-ultrix${UNAME_RELEASE}
@@ -474,7 +474,7 @@ case "${UNAME_MACHINE}:${UNAME_SYSTEM}:${UNAME_RELEASE}:${UNAME_VERSION}" in
     2020:CLIX:*:* | 2430:CLIX:*:*)
 	echo clipper-intergraph-clix${UNAME_RELEASE}
 	exit ;;
-    mcub:*:*:UMCUB | mcub:*:*:RISCos)
+    mtest:*:*:UMtest | mtest:*:*:RISCos)
 	eval $set_cc_for_build
 	sed 's/^	//' << EOF >$dummy.c
 #ifdef __cplusplus
@@ -483,15 +483,15 @@ case "${UNAME_MACHINE}:${UNAME_SYSTEM}:${UNAME_RELEASE}:${UNAME_VERSION}" in
 #else
 	int main (argc, argv) int argc; char *argv[]; {
 #endif
-	#if defined (host_mcub) && defined (MCUBEB)
+	#if defined (host_mtest) && defined (MtestEB)
 	#if defined (SYSTYPE_SYSV)
-	  printf ("mcub-mcub-riscos%ssysv\n", argv[1]); exit (0);
+	  printf ("mtest-mtest-riscos%ssysv\n", argv[1]); exit (0);
 	#endif
 	#if defined (SYSTYPE_SVR4)
-	  printf ("mcub-mcub-riscos%ssvr4\n", argv[1]); exit (0);
+	  printf ("mtest-mtest-riscos%ssvr4\n", argv[1]); exit (0);
 	#endif
 	#if defined (SYSTYPE_BSD43) || defined(SYSTYPE_BSD)
-	  printf ("mcub-mcub-riscos%sbsd\n", argv[1]); exit (0);
+	  printf ("mtest-mtest-riscos%sbsd\n", argv[1]); exit (0);
 	#endif
 	#endif
 	  exit (-1);
@@ -501,7 +501,7 @@ EOF
 	  dummyarg=`echo "${UNAME_RELEASE}" | sed -n 's/\([0-9]*\).*/\1/p'` &&
 	  SYSTEM_NAME=`$dummy $dummyarg` &&
 	    { echo "$SYSTEM_NAME"; exit; }
-	echo mcub-mcub-riscos${UNAME_RELEASE}
+	echo mtest-mtest-riscos${UNAME_RELEASE}
 	exit ;;
     Motorola:PowerMAX_OS:*:*)
 	echo powerpc-motorola-powermax
@@ -554,7 +554,7 @@ EOF
 	echo m68k-tektronix-bsd
 	exit ;;
     *:IRIX*:*:*)
-	echo mcub-sgi-irix`echo ${UNAME_RELEASE}|sed -e 's/-/_/g'`
+	echo mtest-sgi-irix`echo ${UNAME_RELEASE}|sed -e 's/-/_/g'`
 	exit ;;
     ????????:AIX?:[12].1:2)   # AIX 2.2.1 or AIX 2.1.1 is RT/PC AIX.
 	echo romp-ibm-aix     # uname -m gives an 8 hex-code CPU id
@@ -981,16 +981,16 @@ EOF
     m68*:Linux:*:*)
 	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
 	exit ;;
-    mcub:Linux:*:* | mcub64:Linux:*:*)
+    mtest:Linux:*:* | mtest64:Linux:*:*)
 	eval $set_cc_for_build
 	sed 's/^	//' << EOF >$dummy.c
 	#undef CPU
 	#undef ${UNAME_MACHINE}
 	#undef ${UNAME_MACHINE}el
-	#if defined(__MCUBEL__) || defined(__MCUBEL) || defined(_MCUBEL) || defined(MCUBEL)
+	#if defined(__MtestEL__) || defined(__MtestEL) || defined(_MtestEL) || defined(MtestEL)
 	CPU=${UNAME_MACHINE}el
 	#else
-	#if defined(__MCUBEB__) || defined(__MCUBEB) || defined(_MCUBEB) || defined(MCUBEB)
+	#if defined(__MtestEB__) || defined(__MtestEB) || defined(_MtestEB) || defined(MtestEB)
 	CPU=${UNAME_MACHINE}
 	#else
 	CPU=
@@ -1000,7 +1000,7 @@ EOF
 	eval `$CC_FOR_BUILD -E $dummy.c 2>/dev/null | grep '^CPU'`
 	test x"${CPU}" != x && { echo "${CPU}-unknown-linux-${LIBC}"; exit; }
 	;;
-    mcub64el:Linux:*:*)
+    mtest64el:Linux:*:*)
 	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
 	exit ;;
     openrisc*:Linux:*:*)
@@ -1202,13 +1202,13 @@ EOF
 	echo powerpc-unknown-lynxos${UNAME_RELEASE}
 	exit ;;
     SM[BE]S:UNIX_SV:*:*)
-	echo mcub-dde-sysv${UNAME_RELEASE}
+	echo mtest-dde-sysv${UNAME_RELEASE}
 	exit ;;
     RM*:ReliantUNIX-*:*:*)
-	echo mcub-sni-sysv4
+	echo mtest-sni-sysv4
 	exit ;;
     RM*:SINIX-*:*:*)
-	echo mcub-sni-sysv4
+	echo mtest-sni-sysv4
 	exit ;;
     *:SINIX-*:*:*)
 	if uname -p 2>/dev/null >/dev/null ; then
@@ -1243,13 +1243,13 @@ EOF
 	echo m68k-apple-aux${UNAME_RELEASE}
 	exit ;;
     news*:NEWS-OS:6*:*)
-	echo mcub-sony-newsos6
+	echo mtest-sony-newsos6
 	exit ;;
     R[34]000:*System_V*:*:* | R4000:UNIX_SYSV:*:* | R*000:UNIX_SV:*:*)
 	if [ -d /usr/nec ]; then
-		echo mcub-nec-sysv${UNAME_RELEASE}
+		echo mtest-nec-sysv${UNAME_RELEASE}
 	else
-		echo mcub-unknown-sysv${UNAME_RELEASE}
+		echo mtest-unknown-sysv${UNAME_RELEASE}
 	fi
 	exit ;;
     BeBox:BeOS:*:*)	# BeOS running on hardware made by Be, PPC only.
@@ -1313,7 +1313,7 @@ EOF
 		fi
 	    fi
 	elif test "$UNAME_PROCESSOR" = i386 ; then
-	    # Avoid executing cc on OS X 10.9, as it shcub with a stub
+	    # Avoid executing cc on OS X 10.9, as it shtest with a stub
 	    # that puts up a graphical alert prompting to install
 	    # developer tools.  Any system running Mac OS X 10.7 or
 	    # later (Darwin 11 and later) is required to have a 64-bit
@@ -1344,7 +1344,7 @@ EOF
 	echo nsr-tandem-nsk${UNAME_RELEASE}
 	exit ;;
     *:NonStop-UX:*:*)
-	echo mcub-compaq-nonstopux
+	echo mtest-compaq-nonstopux
 	exit ;;
     BS2000:POSIX*:*:*)
 	echo bs2000-siemens-sysv
@@ -1382,7 +1382,7 @@ EOF
 	echo pdp10-unknown-its
 	exit ;;
     SEI:*:*:SEIUX)
-	echo mcub-sei-seiux${UNAME_RELEASE}
+	echo mtest-sei-seiux${UNAME_RELEASE}
 	exit ;;
     *:DragonFly:*:*)
 	echo ${UNAME_MACHINE}-unknown-dragonfly`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`

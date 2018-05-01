@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: cubd.service
-Upstart: cubd.conf
-OpenRC:  cubd.openrc
-         cubd.openrcconf
-CentOS:  cubd.init
+SystemD: testd.service
+Upstart: testd.conf
+OpenRC:  testd.openrc
+         testd.openrcconf
+CentOS:  testd.init
 
 have been made available to assist packagers in creating node packages here.
 

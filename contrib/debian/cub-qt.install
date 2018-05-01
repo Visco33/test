@@ -1,6 +1,6 @@
-usr/local/bin/cub-qt usr/bin
+usr/local/bin/test-qt usr/bin
 share/pixmaps/bitcoin32.xpm usr/share/pixmaps
 share/pixmaps/bitcoin16.xpm usr/share/pixmaps
 share/pixmaps/bitcoin128.png usr/share/pixmaps
-debian/cub-qt.desktop usr/share/applications
-debian/cub-qt.protocol usr/share/kde4/services/
+debian/test-qt.desktop usr/share/applications
+debian/test-qt.protocol usr/share/kde4/services/

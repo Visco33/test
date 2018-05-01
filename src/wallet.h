@@ -75,7 +75,7 @@ enum AvailableCoinsType {
     ALL_COINS = 1,
     ONLY_DENOMINATED = 2,
     ONLY_NOT5000IFMN = 3,
-    ONLY_NONDENOMINATED_NOT5000IFMN = 4, // ONLY_NONDENOMINATED and not 5000 Cub at the same time
+    ONLY_NONDENOMINATED_NOT5000IFMN = 4, // ONLY_NONDENOMINATED and not 5000 test at the same time
     ONLY_5000 = 5                        // find masternode outputs including locked ones (use with caution)
 };
 
@@ -448,7 +448,7 @@ public:
     bool IsDenominatedAmount(CAmount nInputAmount) const;
 
     isminetype IsMine(const CTxIn& txin) const;
-    bool IsMine(const string& cub_address); 
+    bool IsMine(const string& test_address); 
     CAmount GetDebit(const CTxIn& txin, const isminefilter& filter) const;
     isminetype IsMine(const CTxOut& txout) const
     {

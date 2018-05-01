@@ -1,9 +1,9 @@
-/* src/config/cub-config.h.  Generated from cub-config.h.in by configure.  */
-/* src/config/cub-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/test-config.h.  Generated from test-config.h.in by configure.  */
+/* src/config/test-config.h.in.  Generated from configure.ac by autoheader.  */
 
-#ifndef Cub_CONFIG_H
+#ifndef test_CONFIG_H
 
-#define Cub_CONFIG_H
+#define test_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -271,13 +271,13 @@
 #define PACKAGE_BUGREPORT "test.cash"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Cub Core"
+#define PACKAGE_NAME "test Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Cub Core 1.0.0"
+#define PACKAGE_STRING "test Core 1.0.0"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "cub"
+#define PACKAGE_TARNAME "test"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""
@@ -340,4 +340,4 @@
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
 
-#endif //Cub_CONFIG_H
+#endif //test_CONFIG_H

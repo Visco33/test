@@ -778,12 +778,12 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 border:0;
 }
 
-/* About Cub Dialog */
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Cub Contents */
+/* About test Dialog */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About test Contents */
 margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About Cub text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About test text */
 margin-right:10px;
 }
 
@@ -1123,7 +1123,7 @@ min-width:410px;
 margin-right:20px;
 margin-left:0;
 margin-top:0;
-background-image: url(':/images/cub_logo_horizontal');
+background-image: url(':/images/test_logo_horizontal');
 background-repeat:none;
 }
 

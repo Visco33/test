@@ -142,7 +142,7 @@ case $os in
 	-sun*os*)
 		# Prevent following clause from handling this invalid input.
 		;;
-	-dec* | -mcub* | -sequent* | -encore* | -pc532* | -sgi* | -sony* | \
+	-dec* | -mtest* | -sequent* | -encore* | -pc532* | -sgi* | -sony* | \
 	-att* | -7300* | -3300* | -delta* | -motorola* | -sun[234]* | \
 	-unicom* | -ibm* | -next | -hp | -isi* | -apollo | -altos* | \
 	-convergent* | -ncr* | -news | -32* | -3600* | -3100* | -hitachi* |\
@@ -270,27 +270,27 @@ case $basic_machine in
 	| lm32 \
 	| m32c | m32r | m32rle | m68000 | m68k | m88k \
 	| maxq | mb | microblaze | microblazeel | mcore | mep | metag \
-	| mcub | mcubbe | mcubeb | mcubel | mcuble \
-	| mcub16 \
-	| mcub64 | mcub64el \
-	| mcub64octeon | mcub64octeonel \
-	| mcub64orion | mcub64orionel \
-	| mcub64r5900 | mcub64r5900el \
-	| mcub64vr | mcub64vrel \
-	| mcub64vr4100 | mcub64vr4100el \
-	| mcub64vr4300 | mcub64vr4300el \
-	| mcub64vr5000 | mcub64vr5000el \
-	| mcub64vr5900 | mcub64vr5900el \
-	| mcubisa32 | mcubisa32el \
-	| mcubisa32r2 | mcubisa32r2el \
-	| mcubisa32r6 | mcubisa32r6el \
-	| mcubisa64 | mcubisa64el \
-	| mcubisa64r2 | mcubisa64r2el \
-	| mcubisa64r6 | mcubisa64r6el \
-	| mcubisa64sb1 | mcubisa64sb1el \
-	| mcubisa64sr71k | mcubisa64sr71kel \
-	| mcubr5900 | mcubr5900el \
-	| mcubtx39 | mcubtx39el \
+	| mtest | mtestbe | mtesteb | mtestel | mtestle \
+	| mtest16 \
+	| mtest64 | mtest64el \
+	| mtest64octeon | mtest64octeonel \
+	| mtest64orion | mtest64orionel \
+	| mtest64r5900 | mtest64r5900el \
+	| mtest64vr | mtest64vrel \
+	| mtest64vr4100 | mtest64vr4100el \
+	| mtest64vr4300 | mtest64vr4300el \
+	| mtest64vr5000 | mtest64vr5000el \
+	| mtest64vr5900 | mtest64vr5900el \
+	| mtestisa32 | mtestisa32el \
+	| mtestisa32r2 | mtestisa32r2el \
+	| mtestisa32r6 | mtestisa32r6el \
+	| mtestisa64 | mtestisa64el \
+	| mtestisa64r2 | mtestisa64r2el \
+	| mtestisa64r6 | mtestisa64r6el \
+	| mtestisa64sb1 | mtestisa64sb1el \
+	| mtestisa64sr71k | mtestisa64sr71kel \
+	| mtestr5900 | mtestr5900el \
+	| mtesttx39 | mtesttx39el \
 	| mn10200 | mn10300 \
 	| moxie \
 	| mt \
@@ -397,27 +397,27 @@ case $basic_machine in
 	| m68000-* | m680[012346]0-* | m68360-* | m683?2-* | m68k-* \
 	| m88110-* | m88k-* | maxq-* | mcore-* | metag-* \
 	| microblaze-* | microblazeel-* \
-	| mcub-* | mcubbe-* | mcubeb-* | mcubel-* | mcuble-* \
-	| mcub16-* \
-	| mcub64-* | mcub64el-* \
-	| mcub64octeon-* | mcub64octeonel-* \
-	| mcub64orion-* | mcub64orionel-* \
-	| mcub64r5900-* | mcub64r5900el-* \
-	| mcub64vr-* | mcub64vrel-* \
-	| mcub64vr4100-* | mcub64vr4100el-* \
-	| mcub64vr4300-* | mcub64vr4300el-* \
-	| mcub64vr5000-* | mcub64vr5000el-* \
-	| mcub64vr5900-* | mcub64vr5900el-* \
-	| mcubisa32-* | mcubisa32el-* \
-	| mcubisa32r2-* | mcubisa32r2el-* \
-	| mcubisa32r6-* | mcubisa32r6el-* \
-	| mcubisa64-* | mcubisa64el-* \
-	| mcubisa64r2-* | mcubisa64r2el-* \
-	| mcubisa64r6-* | mcubisa64r6el-* \
-	| mcubisa64sb1-* | mcubisa64sb1el-* \
-	| mcubisa64sr71k-* | mcubisa64sr71kel-* \
-	| mcubr5900-* | mcubr5900el-* \
-	| mcubtx39-* | mcubtx39el-* \
+	| mtest-* | mtestbe-* | mtesteb-* | mtestel-* | mtestle-* \
+	| mtest16-* \
+	| mtest64-* | mtest64el-* \
+	| mtest64octeon-* | mtest64octeonel-* \
+	| mtest64orion-* | mtest64orionel-* \
+	| mtest64r5900-* | mtest64r5900el-* \
+	| mtest64vr-* | mtest64vrel-* \
+	| mtest64vr4100-* | mtest64vr4100el-* \
+	| mtest64vr4300-* | mtest64vr4300el-* \
+	| mtest64vr5000-* | mtest64vr5000el-* \
+	| mtest64vr5900-* | mtest64vr5900el-* \
+	| mtestisa32-* | mtestisa32el-* \
+	| mtestisa32r2-* | mtestisa32r2el-* \
+	| mtestisa32r6-* | mtestisa32r6el-* \
+	| mtestisa64-* | mtestisa64el-* \
+	| mtestisa64r2-* | mtestisa64r2el-* \
+	| mtestisa64r6-* | mtestisa64r6el-* \
+	| mtestisa64sb1-* | mtestisa64sb1el-* \
+	| mtestisa64sr71k-* | mtestisa64sr71kel-* \
+	| mtestr5900-* | mtestr5900el-* \
+	| mtesttx39-* | mtesttx39el-* \
 	| mmix-* \
 	| mt-* \
 	| msp430-* \
@@ -611,7 +611,7 @@ case $basic_machine in
 		basic_machine=m68k-da30
 		;;
 	decstation | decstation-3100 | pmax | pmax-* | pmin | dec3100 | decstatn)
-		basic_machine=mcub-dec
+		basic_machine=mtest-dec
 		;;
 	decsystem10* | dec10*)
 		basic_machine=pdp10-dec
@@ -781,7 +781,7 @@ case $basic_machine in
 		os=-vsta
 		;;
 	iris | iris4d)
-		basic_machine=mcub-sgi
+		basic_machine=mtest-sgi
 		case $os in
 		    -irix*)
 			;;
@@ -809,7 +809,7 @@ case $basic_machine in
 		basic_machine=m88k-omron
 		;;
 	magnum | m3230)
-		basic_machine=mcub-mcub
+		basic_machine=mtest-mtest
 		os=-sysv
 		;;
 	merlin)
@@ -838,11 +838,11 @@ case $basic_machine in
 		basic_machine=m68k-atari
 		os=-mint
 		;;
-	mcub3*-*)
-		basic_machine=`echo $basic_machine | sed -e 's/mcub3/mcub64/'`
+	mtest3*-*)
+		basic_machine=`echo $basic_machine | sed -e 's/mtest3/mtest64/'`
 		;;
-	mcub3*)
-		basic_machine=`echo $basic_machine | sed -e 's/mcub3/mcub64/'`-unknown
+	mtest3*)
+		basic_machine=`echo $basic_machine | sed -e 's/mtest3/mtest64/'`-unknown
 		;;
 	monitor)
 		basic_machine=m68k-rom68k
@@ -896,7 +896,7 @@ case $basic_machine in
 		os=-newsos
 		;;
 	news-3600 | risc-news)
-		basic_machine=mcub-sony
+		basic_machine=mtest-sony
 		os=-newsos
 		;;
 	necv70)
@@ -933,7 +933,7 @@ case $basic_machine in
 		os=-mon960
 		;;
 	nonstopux)
-		basic_machine=mcub-compaq
+		basic_machine=mtest-compaq
 		os=-nonstopux
 		;;
 	np1)
@@ -1068,7 +1068,7 @@ case $basic_machine in
 		os=-coff
 		;;
 	rm[46]00)
-		basic_machine=mcub-siemens
+		basic_machine=mtest-siemens
 		;;
 	rtpc | rtpc-*)
 		basic_machine=romp-ibm
@@ -1084,17 +1084,17 @@ case $basic_machine in
 		os=-udi
 		;;
 	sb1)
-		basic_machine=mcubisa64sb1-unknown
+		basic_machine=mtestisa64sb1-unknown
 		;;
 	sb1el)
-		basic_machine=mcubisa64sb1el-unknown
+		basic_machine=mtestisa64sb1el-unknown
 		;;
 	sde)
-		basic_machine=mcubisa32-sde
+		basic_machine=mtestisa32-sde
 		os=-elf
 		;;
 	sei)
-		basic_machine=mcub-sei
+		basic_machine=mtest-sei
 		os=-seiux
 		;;
 	sequent)
@@ -1192,10 +1192,10 @@ case $basic_machine in
 		os=-linux-gnu
 		;;
 	tx39)
-		basic_machine=mcubtx39-unknown
+		basic_machine=mtesttx39-unknown
 		;;
 	tx39el)
-		basic_machine=mcubtx39el-unknown
+		basic_machine=mtesttx39el-unknown
 		;;
 	toad1)
 		basic_machine=pdp10-xkl
@@ -1555,7 +1555,7 @@ esac
 else
 
 # Here we handle the default operating systems that come with various machines.
-# The value should be what the vendor currently shcub out the door with their
+# The value should be what the vendor currently shtest out the door with their
 # machine or put another way, the most popular os provided with the machine.
 
 # Note that if you're going to try to match "-MANUFACTURER" here (say,
@@ -1623,10 +1623,10 @@ case $basic_machine in
 	mep-*)
 		os=-elf
 		;;
-	mcub*-cisco)
+	mtest*-cisco)
 		os=-elf
 		;;
-	mcub*-*)
+	mtest*-*)
 		os=-elf
 		;;
 	or32-*)

@@ -2,24 +2,24 @@
 
 # backward compatibility for existing gentoo layout
 #
-if [ -d "/var/lib/cub/.cub" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/cub/.cub"
+if [ -d "/var/lib/test/.test" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/test/.test"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/cubd"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/testd"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/cub/cub.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/cubd}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/cubd.pid}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/test/test.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/testd}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/testd.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-cub}
-BITCOIND_GROUP=${BITCOIND_GROUP:-cub}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/cubd}
+BITCOIND_USER=${BITCOIND_USER:-test}
+BITCOIND_GROUP=${BITCOIND_GROUP:-test}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/testd}
 
-name="Cub Daemon"
-description="CUB crypto-currency p2p network daemon"
+name="test Daemon"
+description="test crypto-currency p2p network daemon"
 
-command="/usr/bin/cubd"
+command="/usr/bin/testd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -65,7 +65,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run cubd."
+		eerror "ERROR: You must set a secure rpcpassword to run testd."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
@@ -78,7 +78,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Cub Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"test Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

@@ -1,2 +1,2 @@
-usr/local/bin/cubd usr/bin
-usr/local/bin/cub-cli usr/bin
+usr/local/bin/testd usr/bin
+usr/local/bin/test-cli usr/bin

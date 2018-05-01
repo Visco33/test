@@ -164,6 +164,6 @@
     </message>
     </context>
 <context>
-    <name>cub-core</name>
+    <name>test-core</name>
     </context>
 </TS>

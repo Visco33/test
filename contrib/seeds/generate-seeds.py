@@ -58,7 +58,7 @@ def name_to_ipv6(addr):
             if comp == '':
                 if i == 0 or i == (len(addr)-1): # skip empty component at beginning or end
                     continue
-                x += 1 # :: skcub to suffix
+                x += 1 # :: sktest to suffix
                 assert(x < 2)
             else: # two bytes per component
                 val = int(comp, 16)

@@ -148,8 +148,8 @@
         <translation>Czy na pewno chcesz zakodować portfel?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Cub&lt;/b&gt;!</source>
-        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE Cub!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR test&lt;/b&gt;!</source>
+        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE test!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -227,8 +227,8 @@
         <translation>Zakodowany klucz:</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CUB address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres CUB jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this test address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres test jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -518,16 +518,16 @@
         <translation>&amp;Pomoc</translation>
     </message>
     <message>
-        <source>Cub</source>
+        <source>test</source>
         <translation>&amp;Rdzeń bitcoin</translation>
     </message>
     <message>
-        <source>Send coins to a CUB address</source>
-        <translation>Wyślij monety do adresu CUB</translation>
+        <source>Send coins to a test address</source>
+        <translation>Wyślij monety do adresu test</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and cub: URIs)</source>
-        <translation>Zarządaj płatności (generuje kod QR i cub:URI)</translation>
+        <source>Request payments (generates QR codes and test: URIs)</source>
+        <translation>Zarządaj płatności (generuje kod QR i test:URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -538,24 +538,24 @@
         <translation>Przeglądaj masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Cub</source>
+        <source>&amp;About test</source>
         <translation>&amp;O rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Show information about Cub</source>
+        <source>Show information about test</source>
         <translation>Pokaż informacje o rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Modify configuration options for CUB</source>
-        <translation>Modyfikuj opcje konfiguracji CUB</translation>
+        <source>Modify configuration options for test</source>
+        <translation>Modyfikuj opcje konfiguracji test</translation>
     </message>
     <message>
-        <source>Sign messages with your CUB addresses to prove you own them</source>
-        <translation>Zatwierdź wiadomość z twoimi adresami CUB, by udowodnić, że jesteś w ich posiadaniu</translation>
+        <source>Sign messages with your test addresses to prove you own them</source>
+        <translation>Zatwierdź wiadomość z twoimi adresami test, by udowodnić, że jesteś w ich posiadaniu</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified CUB addresses</source>
-        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu CUB</translation>
+        <source>Verify messages to ensure they were signed with specified test addresses</source>
+        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu test</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -582,8 +582,8 @@
         <translation>Otwórz &amp;Plik konfiguracji Masternode</translation>
     </message>
     <message>
-        <source>Open a CUB: URI or payment request</source>
-        <translation>Otwórz CUB: URI i żądanie zapłaty</translation>
+        <source>Open a test: URI or payment request</source>
+        <translation>Otwórz test: URI i żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -594,12 +594,12 @@
         <translation>Okno eksplorera bloków</translation>
     </message>
     <message>
-        <source>Show the Cub help message to get a list with possible CUB command-line options</source>
-        <translation>Pokaż wiadomość pomocy rdzenia CUB, aby dostać listę możliwych opcji CUB command-line</translation>
+        <source>Show the test help message to get a list with possible test command-line options</source>
+        <translation>Pokaż wiadomość pomocy rdzenia test, aby dostać listę możliwych opcji test command-line</translation>
     </message>
     <message>
-        <source>Cub client</source>
-        <translation>Rdzeń CUB klient</translation>
+        <source>test client</source>
+        <translation>Rdzeń test klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -916,7 +916,7 @@ MultiWysyłlka: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Cub</source>
+        <source>test</source>
         <translation>&amp;Rdzeń bitcoin</translation>
     </message>
     </context>
@@ -931,7 +931,7 @@ MultiWysyłlka: %1</translation>
         <translation>Użyj niestandardowej ścieżki danych</translation>
     </message>
     <message>
-        <source>Cub</source>
+        <source>test</source>
         <translation>&amp;Rdzeń bitcoin</translation>
     </message>
     <message>
@@ -1192,16 +1192,16 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>Zezwól na przychodzące połączenia</translation>
     </message>
     <message>
-        <source>Automatically start CUB after logging in to the system.</source>
-        <translation>Automatycznie uruchom CUB po zalogowaniu do systemu</translation>
+        <source>Automatically start test after logging in to the system.</source>
+        <translation>Automatycznie uruchom test po zalogowaniu do systemu</translation>
     </message>
     <message>
-        <source>&amp;Start CUB on system login</source>
-        <translation>&amp;Uruchom CUB podczas logowania do systemu</translation>
+        <source>&amp;Start test on system login</source>
+        <translation>&amp;Uruchom test podczas logowania do systemu</translation>
     </message>
     <message>
-        <source>Amount of CUB to keep anonymized</source>
-        <translation>Liczba CUB do anonimizacji</translation>
+        <source>Amount of test to keep anonymized</source>
+        <translation>Liczba test do anonimizacji</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1220,18 +1220,18 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>&amp;Sieć</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting CUB.</source>
-        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie CUB</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting test.</source>
+        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie test</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/testtest/cubcoin-translations</source>
+https://www.transifex.com/testtest/testcoin-translations</source>
         <translation>Brakuje języka bądź nieukończona pełnego tłumaczenia? Pomóż w tłumaczeniu tutaj:
-https://www.transifex.com/testtest/cubcoin-translations </translation>
+https://www.transifex.com/testtest/testcoin-translations </translation>
     </message>
     <message>
-        <source>Connect to the CUB network through a SOCKS5 proxy.</source>
-        <translation>Połącz z siecią CUB poprzez SOCKS5 proxy.</translation>
+        <source>Connect to the test network through a SOCKS5 proxy.</source>
+        <translation>Połącz z siecią test poprzez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1373,7 +1373,7 @@ https://www.transifex.com/testtest/cubcoin-translations </translation>
         <translation>Status:</translation>
     </message>
     <message>
-        <source>0 Cub / 0 Rounds</source>
+        <source>0 test / 0 Rounds</source>
         <translation>0 OIVX / 0 Rund</translation>
     </message>
     <message>
@@ -1458,8 +1458,8 @@ https://www.transifex.com/testtest/cubcoin-translations </translation>
         <translation>Liczba</translation>
     </message>
     <message>
-        <source>Enter a CUB address (e.g. %1)</source>
-        <translation>Wprowadź adres CUB (np. %1)</translation>
+        <source>Enter a test address (e.g. %1)</source>
+        <translation>Wprowadź adres test (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1897,8 +1897,8 @@ https://www.transifex.com/testtest/cubcoin-translations </translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this CUB address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres CUB jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this test address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres test jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>
@@ -1932,7 +1932,7 @@ https://www.transifex.com/testtest/cubcoin-translations </translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Cub</source>
+        <source>test</source>
         <translation>&amp;Rdzeń bitcoin</translation>
     </message>
     </context>
@@ -2024,7 +2024,7 @@ https://www.transifex.com/testtest/cubcoin-translations </translation>
     </message>
     </context>
 <context>
-    <name>cub-core</name>
+    <name>test-core</name>
     <message>
         <source>Error</source>
         <translation>Błąd</translation>
