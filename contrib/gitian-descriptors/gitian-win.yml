@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/cubexteam/cub.git"
+- "url": "https://github.com/testtest/cub.git"
   "dir": "cub"
 files: []
 script: |

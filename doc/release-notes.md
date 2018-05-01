@@ -2,14 +2,14 @@
 
 Cub version *version* is now available from:
 
-  <https://github.com/cubexteam/cub/releases>
+  <https://github.com/testtest/cub/releases>
 
 This is a new major version release, including various bug fixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/cubexteam/cub/issues>
+  <https://github.com/testtest/cub/issues>
 
 Compatibility
 ==============

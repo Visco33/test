@@ -1711,9 +1711,9 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/cubexteam/cubcoin-translations</source>
+https://www.transifex.com/testtest/cubcoin-translations</source>
         <translation>Отсутствует ваш язык или заметили незавершенный перевод? Вы можете помочь нам стать лучше:
-https://www.transifex.com/cubexteam/cubcoin-translations</translation>
+https://www.transifex.com/testtest/cubcoin-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>

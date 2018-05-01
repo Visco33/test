@@ -225,7 +225,7 @@ TransactionTableModel::~TransactionTableModel()
 }
 
 /** Updates the column title to "Amount (DisplayUnit)" and emits headerDataChanged() signal for table headers to react. */
-void TransactionTableModel::updateAmountColumnTitle()
+void TransactionTableModel::updatestountColumnTitle()
 {
     columns[Amount] = BitcoinUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
     emit headerDataChanged(Qt::Horizontal, Amount, Amount);
@@ -639,7 +639,7 @@ QModelIndex TransactionTableModel::index(int row, int column, const QModelIndex&
 void TransactionTableModel::updateDisplayUnit()
 {
     // emit dataChanged to update Amount column with the current unit
-    updateAmountColumnTitle();
+    updatestountColumnTitle();
     emit dataChanged(index(0, Amount), index(priv->size() - 1, Amount));
 }
 

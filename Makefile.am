@@ -199,7 +199,7 @@ test_cub_coverage.info: baseline_filtered_combined.info test_cub_filtered.info
 total_coverage.info:  baseline_filtered_combined.info test_cub_filtered.info block_test_filtered.info
 	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_cub_filtered.info -a block_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
 
-test_cubex.cashverage/.dirstamp:  test_cub_coverage.info
+test_test.cashverage/.dirstamp:  test_cub_coverage.info
 	$(GENHTML) -s $< -o $(@D)
 	@touch $@
 
@@ -207,7 +207,7 @@ total.coverage/.dirstamp: total_coverage.info
 	$(GENHTML) -s $< -o $(@D)
 	@touch $@
 
-cov: test_cubex.cashverage/.dirstamp total.coverage/.dirstamp
+cov: test_test.cashverage/.dirstamp total.coverage/.dirstamp
 
 endif
 
@@ -226,5 +226,5 @@ CLEANFILES = $(OSX_DMG) $(BITCOIN_WIN_INSTALLER)
 .INTERMEDIATE: $(COVERAGE_INFO)
 
 clean-local:
-	rm -rf test_cubex.cashverage/ total.coverage/ $(OSX_APP)
+	rm -rf test_test.cashverage/ total.coverage/ $(OSX_APP)
 

@@ -281,7 +281,7 @@ Clone the git repositories for cub and gitian and then checkout the cub version 
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/cubexteam/cub.git
+git clone https://github.com/testtest/cub.git
 cd cub
 git checkout v${VERSION}
 cd ..
@@ -377,7 +377,7 @@ and inputs.
 
 For example:
 ```bash
-URL=https://github.com/cubexteam/cub.git
+URL=https://github.com/testtest/cub.git
 COMMIT=b616fb8ef0d49a919b72b0388b091aaec5849b96
 ./bin/gbuild --commit cub=${COMMIT} --url cub=${URL} ../cub/contrib/gitian-descriptors/gitian-linux.yml
 ./bin/gbuild --commit cub=${COMMIT} --url cub=${URL} ../cub/contrib/gitian-descriptors/gitian-win.yml

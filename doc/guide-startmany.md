@@ -137,7 +137,7 @@ I usually confirm that remote is on the correct block by issuing:
 
 ```cubd getinfo```
 
-And compare with the official explorer at http://cubexplorer.coin-server.com <or> dnet.presstab.pw
+And compare with the official explorer at http://testplorer.coin-server.com <or> dnet.presstab.pw
 
 ### Local
 

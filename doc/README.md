@@ -3,7 +3,7 @@ Cub
 
 Setup
 ---------------------
-[Cub](http://cubex.cash/) is the original Cub client and it builds the backbone of the network. However, it downloads and stores the entire history of Cub transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[Cub](http://test.cash/) is the original Cub client and it builds the backbone of the network. However, it downloads and stores the entire history of Cub transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -34,7 +34,7 @@ The following are developer notes on how to build Cub on your native platform. T
 
 Development
 ---------------------
-The Cub repo's [root README](https://github.com/cubexteam/cub/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Cub repo's [root README](https://github.com/testtest/cub/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

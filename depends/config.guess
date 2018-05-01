@@ -94,7 +94,7 @@ trap 'exit 1' 1 2 15
 # Historically, `CC_FOR_BUILD' used to be named `HOST_CC'. We still
 # use `HOST_CC' if defined, but it is deprecated.
 
-# Portable tmp directory creation inspired by the Autoconf team.
+# Portable tmp directory creation inspired by the Autoconf test.
 
 set_cc_for_build='
 trap "exitcode=\$?; (rm -f \$tmpfiles 2>/dev/null; rmdir \$tmp 2>/dev/null) && exit \$exitcode" 0 ;

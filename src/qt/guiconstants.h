@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 CUBEX Developers
+// Copyright (c) 2018 test Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -50,7 +50,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 35
 
 #define QAPP_ORG_NAME "Cub"
-#define QAPP_ORG_DOMAIN "cubex.cash"
+#define QAPP_ORG_DOMAIN "test.cash"
 #define QAPP_APP_NAME_DEFAULT "Cub-Qt"
 #define QAPP_APP_NAME_TESTNET "Cub-Qt-testnet"
 
