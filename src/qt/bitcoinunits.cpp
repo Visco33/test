@@ -95,11 +95,11 @@ QString BitcoinUnits::description(int unit)
     } else {
         switch (unit) {
         case test:
-            return QString("Testtests");
+            return QString("tests");
         case mtest:
-            return QString("Milli-Testtest (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-test (1 / 1" THIN_SP_UTF8 "000)");
         case utest:
-            return QString("Micro-Testtest (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("Micro-test (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }

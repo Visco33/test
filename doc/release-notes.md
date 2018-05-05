@@ -2,14 +2,14 @@
 
 test version *version* is now available from:
 
-  <https://github.com/testtest/test/releases>
+  <https://github.com/test/test/releases>
 
 This is a new major version release, including various bug fixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/testtest/test/issues>
+  <https://github.com/test/test/issues>
 
 Compatibility
 ==============

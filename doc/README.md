@@ -34,7 +34,7 @@ The following are developer notes on how to build test on your native platform. 
 
 Development
 ---------------------
-The test repo's [root README](https://github.com/testtest/test/blob/master/README.md) contains relevant information on the development process and automated testing.
+The test repo's [root README](https://github.com/test/test/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

@@ -1719,9 +1719,9 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/testtest/testcoin-translations</source>
+https://www.transifex.com/test/testcoin-translations</source>
         <translation>지원 언어가 없거나 번역이 불완전한가요? 번역 기여 도움말:
-https://www.transifex.com/testtest/testcoin-translations</translation>
+https://www.transifex.com/test/testcoin-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>

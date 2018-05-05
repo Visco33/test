@@ -1225,9 +1225,9 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/testtest/testcoin-translations</source>
+https://www.transifex.com/test/testcoin-translations</source>
         <translation>Brakuje języka bądź nieukończona pełnego tłumaczenia? Pomóż w tłumaczeniu tutaj:
-https://www.transifex.com/testtest/testcoin-translations </translation>
+https://www.transifex.com/test/testcoin-translations </translation>
     </message>
     <message>
         <source>Connect to the test network through a SOCKS5 proxy.</source>

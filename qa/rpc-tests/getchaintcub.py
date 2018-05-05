@@ -10,7 +10,7 @@
 from test_framework import BitcoinTestFramework
 from util import assert_equal
 
-class GetChainTtestTest (BitcoinTestFramework):
+class GetChainTtest (BitcoinTestFramework):
 
     def run_test (self):
         BitcoinTestFramework.run_test (self)
@@ -56,4 +56,4 @@ class GetChainTtestTest (BitcoinTestFramework):
         assert_equal (ttest[1], shortTip)
 
 if __name__ == '__main__':
-    GetChainTtestTest ().main ()
+    GetChainTtest ().main ()
